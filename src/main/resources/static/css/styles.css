@@ -1,0 +1,115 @@
+/*
+colors:
+<!--ICE-->
+<!--#99D3DF-->
+<!--FRESH WATER-->
+<!--#88BBD6-->
+<!--PLASTER-->
+<!--#CDCDCD-->
+<!--MEN-->
+<!--#E9E9E9-->
+
+Main Page (index.html)
+ */
+.choose-or-add-subject-css {
+    border: 2px solid black;
+    padding: 30px;
+    /*background-color: #0275D8;*/
+    background-color: #88BBD6;
+    text-align: left;
+    margin-left: 30px;
+    width: fit-content;
+}
+.descending-header-css {
+    color: #364bef;
+    text-align: right;
+    width: fit-content;
+    margin-left: 60px;
+}
+
+/*
+Subject Page
+ */
+.button-main-css {
+    background-color: #88BBD6;
+    border-radius: 8px;
+    border-style: none;
+    display: inline-block;
+    font-weight: 500;
+    padding: 10px 16px;
+}
+.button-main-css:hover,
+.button-main-css:focus {
+    background-color: #F082AC;
+}
+
+/*
+Training Page
+ */
+.training-card-list-css {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #99D3DF;
+    width: available;
+    margin-top: 5px;
+    padding: 6px
+}
+/*
+Create/View/Edit Cards Page
+ */
+.card-list-css {
+    border: 1px solid black;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #99D3DF;
+    width: 100%;
+    margin-top: 20px;
+}
+.card-list-css td {
+    border: 1px solid black;
+    width:100%;
+    padding: 6px;
+}
+.card-list-css td:first-child {
+    text-align:right;
+    width: 4ch;
+}
+.custom-table-card-header-css {
+    border: 1px solid black;
+    text-align:center;
+}
+.new-card-form-css {
+    background-color: #99D3DF;
+    width: available;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 6px
+}
+/*
+Results Page
+ */
+
+/*
+Global
+ */
+.return-link-css {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+.return-link-css p {
+    display: inline;
+    font-size: 18px;
+}
+.return-link-css p a {
+    color: #0275d8;
+    text-decoration: none;
+}
+.return-link-css p a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+.sub-page-header-css {
+    /*color: orign #0275D8*/
+    color: #014a89
+}

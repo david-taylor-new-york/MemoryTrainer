@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<?php include('./meta.php'); ?>
+
+<head>
+    <title>Training</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- above are consistent across pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/controllers/resultsController.js"></script>
+    <script type="text/javascript" src="./js/controllers/subjectController.js"></script>
+    <script type="text/javascript" src="./js/controllers/common.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="return-link-css">
+    <p><a href="javascript:void(0)" onclick="window.location.href='subjectPage.html?subjectId=' + getSubjectIdFromQueryString()">Main Menu</a></p>
+</div>
+
+<h3 id="subjectPageHeader"></h3>
+<h4 class="sub-page-header-css">Training</h4>
+
+<div id="status-bar">
+    <button type="button" id="start-training-btn" class="start-btn-css">Start</button>
+    <script>
+        $(document).ready(function(){
+            $("#start-training-btn").click(function(){
+                $("#start-training-btn").hide();
+                $("#training-content").show();
+                $("#guess").focus();
+                $(iterateOverCards());
+            });
+        });
+    </script>
+</div>
+
+<div id="training-content" class="new-card-form-style" hidden>
+
+    <!-- question gets inserted here: -->
+    <div id="question-div" class="question-div-style">
+        <div>Question:</div>
+    </div>
+    <div id="answer-div" class="question-div-style" hidden>
+        <div>Answer:</div>
+    </div>
+
+    <form id="guess-form" method="post">
+        <label for="cardId"></label><input type="text" id="cardId" name="cardId" value="1" hidden>
+        <label for="timeToRespond"></label><input type="text" id="timeToRespond" name="timeToRespond" value="1" hidden>
+
+<!--        <div class="guess-form-div-css">-->
+            <label for="guess">Guess:<input id="guess" style="color:#014A89; width: 85%; padding: 10px" placeholder="your guess + <enter>" class="input-item" required></label>
+<!--                <label for="guess" style="font-weight: bold">New: </label><input style="width: 45%" name="guess" id="guess" placeholder="question + <tab>" class="input-item" required>-->
+<!--            <label for="answer"></label><input style="width: 45%" name="answer" id="answer" placeholder="answer + <enter>" class="input-item" required>-->
+            <button  id="submit-guess-btn" type="button" style="width: 5%; float: right;">Submit</button>
+<!--        </div>-->
+    </form>
+</div>
+
+<div id="finish-training-link" class="finish-training-link" hidden>
+    <p><a href="javascript:void(0)" onclick="window.location.href='subjectPage.html?subjectId=' + getSubjectIdFromQueryString()">RETURN</a></p>
+</div>
+
+</body>
+
+<script>
+    let questionDiv=document.getElementById('question-div');
+    let answerDiv=document.getElementById('answer-div');
+    let guessInputItem=document.getElementById('guess');
+    let finishTrainingLink=document.getElementById('finish-training-link');
+    // let guessForm = document.getElementById("guess-form");
+    let timer = 0;
+    let myInterval, item;
+    let correctlyAnswered = 0;
+    let totalCards = 0;
+
+    function iterateOverCards() {
+        return getCards().then(iterator => {
+            item = iterator.next().value
+            questionDiv.innerHTML = `<p style="padding-left: 6px">${item.question}</p>`;
+            myInterval = setInterval(incrementTimer, 100);
+            document.getElementById('submit-guess-btn').addEventListener('click', function nextCard(e) {
+                console.log("starting loop");
+                totalCards+=1;
+                answerDiv.hidden = false;
+                // let guessForm = $( "#guess-form" );
+                document.getElementById("guess-form").elements["cardId"].value = item.cardId;
+                document.getElementById("guess-form").elements["timeToRespond"].value = timer;
+
+                if (document.getElementById("guess-form").elements["guess"].value === item.answer) {
+                    document.getElementById("guess-form").elements["guess"].value = "correct";
+                    correctlyAnswered+=1;
+                    answerDiv.innerHTML = `<div style="padding: 6px;"><b style="background-color: greenyellow;">CORRECT!</b></div>`;
+                    answerDiv.innerHTML += `<div style="padding: 6px;"><b>(${timer / 10} seconds)</b></div>`;
+                } else {
+                    document.getElementById("guess-form").elements["guess"].value = document.getElementById("guess-form").elements["guess"].value.value;
+                    answerDiv.innerHTML = `<p class="answer-div">No! --> ${item.answer} <--</p>`;
+                    answerDiv.innerHTML += `<div style="text-align:center; padding: 6px;"><b>(${timer / 10} seconds)</b></div>`;
+                }
+                console.log("here");
+                addCardResultFromForm();
+                console.log("here2");
+                document.getElementById("guess-form").elements["guess"].value = '';
+                document.getElementById("guess-form").elements["guess"].focus();
+                item = iterator.next().value
+                if (item) {
+                    questionDiv.innerHTML = `<p style="padding-left: 6px">${item.question}</p>`;
+                } else {
+                    questionDiv.innerHTML = `<p style="text-align: center; background-color: greenyellow;">DONE!</p>`;
+                    questionDiv.innerHTML += `<p style="text-align: center; background-color: greenyellow;">Correctly answered < ${correctlyAnswered} > out of < ${totalCards} ></p>`;
+                    document.getElementById('finish-training-link').hidden = false;
+                }
+                timer = 0;
+                console.log("finished loop");
+            });
+        })
+    }
+
+    function incrementTimer() {
+        timer+=1;
+    }
+
+    function getCards(){
+        return fetch('/getCardsBySubjectId/' + getSubjectIdFromQueryString())
+            .then(response=>{
+            return response.json()
+        }).then(data=>{
+            console.log("data.results = " + data)
+            return cardIterator(data);
+        })
+    }
+
+    function cardIterator(data){
+        let nextindex=0;
+        return {
+            next: function(){
+                return nextindex<data.length ? {value: data[nextindex++], done:false} : {done:true};
+            }
+        };
+    }
+
+    window.onload = (event) => {
+        document.forms['guess-form'].elements["guess"].value = '';
+    };
+
+</script>
+
+</html>

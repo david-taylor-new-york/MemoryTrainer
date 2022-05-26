@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<?php include('./meta.php'); ?>
+
+<head>
+    <title>Delete Card</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- above are consistent across pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/controllers/subjectController.js"></script>
+    <script type="text/javascript" src="./js/controllers/cardController.js"></script>
+    <script type="text/javascript" src="./js/controllers/common.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="return-link-css">
+    <p><a href="javascript:void(0)" onclick="window.location.href='subjectPage.html?subjectId=' + getSubjectIdFromQueryString()">Main Menu</a></p>
+</div>
+
+<h3 id="subjectPageHeader"></h3>
+<h4 class="sub-page-header-css">Delete Card</h4>
+
+<div class="new-card-form-style">
+    <form method="post" id="delete-card-form">
+        <div>
+            <label for="delete-card-id" style="font-weight: bold">Card: </label><input required style="-moz-appearance: textfield; text-align: center; width: 50px" name="delete-card-id" id="delete-card-id" type="number" placeholder="< id >" class="input-item">
+            <button type="button" id="delete-card-btn" style="width: 5%;">Delete</button>
+        </div>
+    </form>
+</div>
+
+<table id="card-list-tbl" class="card-list-css">
+    <thead>
+    <tr>
+        <th class="custom-table-card-header-css" style="width:4ch"><div class="dev-th-style">Id</div></th>
+        <th class="custom-table-card-header-css"><div class="dev-th-style">Question</div></th>
+        <th class="custom-table-card-header-css"><div class="dev-th-style">Answer</div></th>
+    </tr>
+    </thead>
+    <tbody id="tableBodyId">
+
+    </tbody>
+</table>
+
+</body>
+
+<script>
+    window.onload = event => {getSubjectNameHeader()}
+    // this handles <add> button press
+    deleteCardWhenSubmitKeyPressed();
+    // this handles <enter> key press
+    deleteCardWhenEnterKeyPressed();
+    window.onload = event => {getAllCardsBySubjectId()};
+    document.getElementById("delete-card-id").value='';
+    document.getElementById("delete-card-id").focus();
+</script>
+
+</html>

@@ -1,0 +1,1546 @@
+<!--<div id="content-div">-->
+<!--    <form>-->
+<!--        <input type="button" class="button-main-css" value="Start" onclick="startTraining()">-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--<h3 id="subjectPageHeader" style="color:#0275D8"><script type="text/javascript">document.write("Subject: " + getSubjectNameBySubjectId(subjectId))</script></h3>-->
+<!--<h3 id="subjectPageHeader" style="color:#0275D8"><script type="text/javascript">document.write("Subject: ")</script></h3>-->`;
+
+
+<!--//-->
+<!--// const subjectId = Promise.resolve(getSubjectIdFromQueryString())-->
+<!--//     .then(function(value) {-->
+<!--//         console.log("here value= " + value)-->
+<!--//-->
+<!--//-->
+<!--//             Promise.resolve(getSubjectBySubjectId(value)-->
+<!--//                 .then(function(value2) {-->
+<!--//                     console.log("here subjectName inner= " + value2);-->
+<!--//                 }, function(value2) {-->
+<!--//                     console.log("ERROR, PROMISE RESOLUTION FAILED" + value2);-->
+<!--//                 })-->
+<!--//             console.log("here subjectName2= " + value2);-->
+<!--//         },-->
+<!--//         function(value) {console.log("ERROR2, PROMISE2 RESOLUTION2 FAILED" + value);-->
+<!--//         });-->
+
+<!--// Promise.resolve(getSubjectIdFromQueryString())-->
+<!--//     .then(function(value) {-->
+<!--//             console.log("here value= " + value);-->
+<!--//             Promise.resolve(getSubjectBySubjectId(value)-->
+<!--//                 .then(function(value2) {-->
+<!--//                     console.log("here subjectName inner= " + value2);-->
+<!--//                 }, function(value2) {-->
+<!--//                     console.log("ERROR, PROMISE RESOLUTION FAILED" + value2);-->
+<!--//                 })-->
+<!--//             console.log("here subjectName2= " + value2);-->
+<!--//         },-->
+<!--//         function(value) {console.log("ERROR2, PROMISE2 RESOLUTION2 FAILED" + value);-->
+<!--//         });-->
+<!--//-->
+<!--// Promise.resolve(getSubjectIdFromQueryString())-->
+<!--//     .then(function(value) {-->
+<!--//             console.log("here value= " + value);-->
+<!--//             Promise.resolve(getSubjectNameFromId(value))-->
+<!--//                 .then(function(value2) {-->
+<!--//                     console.log("here subjectName= " + value2);-->
+<!--//                 }, function(value2) {-->
+<!--//                     console.log("ERROR, PROMISE RESOLUTION FAILED" + value2);-->
+<!--//                     });-->
+<!--//         },-->
+<!--//         function(value) {console.log("ERROR2, PROMISE2 RESOLUTION2 FAILED" + value);-->
+<!--//         });-->
+<!--//-->
+
+<!--// const subjectName = getSubjectNameFromId(value);-->
+<!--// console.log("here is the submect name: " + subjectName);-->
+
+<!--// Promise.resolve(getSubjectIdFromQueryString())-->
+<!--//     .then(function(value) {console.log("here value= " + value);}, function(value) {-->
+<!--//         console.log("ERROR, PROMISE RESOLUTION FAILED")-->
+<!--//     });-->
+
+<!--// Promise.resolve(subjectName).then(function(value) {-->
+<!--//     console.log(value);-->
+<!--// }, function(value) {-->
+<!--//     not called-->
+<!--// });-->
+
+
+<!--<script>-->
+<!--    const subject = getSubjectIdFromQueryString();-->
+<!--    console.log(subject);-->
+<!--    const subjectName = getSubjectNameFromId(getSubjectIdFromQueryString())-->
+<!--    console.log(subjectName);-->
+<!--</script>-->
+
+<!--import { promises as fs } from 'fs';-->
+<!--module.exports.readUserModule = async function readUserModule(filePath) {-->
+<!--const data = await fs.readFile(filePath, 'utf-8');-->
+<!--return new Buffer(data);-->
+<!--}-->
+
+<!--// ext.get = (url) => {-->
+<!--//     let myHeaders = new Headers();-->
+<!--//     let options = {-->
+<!--//         method: 'GET',-->
+<!--//         headers: myHeaders,-->
+<!--//         mode: 'cors'-->
+<!--//     };-->
+<!--//     return fetch(url, options).then(response => response.json());-->
+<!--// };-->
+<!--// ext.get('url').then(result => {-->
+<!--//     // result is the parsed JSON - i.e. a plan ol' javascript object-->
+<!--// });-->
+
+<!--// function fetchCards() {-->
+<!--//     console.log("in fetchCards...")-->
+<!--//     const table = document.getElementById("tableBodyId");-->
+<!--//     return fetch('/findCardsBySubjectId/' + getSubjectIdFromQueryString())-->
+<!--//         .then( (response) => response.json())-->
+<!--//         .then( (data) => {-->
+<!--//             if (JSON.stringify([]) !== JSON.stringify(data)) {-->
+<!--//                 data.forEach( (item) => {-->
+<!--//                     // $( "#result" ).load( "ajax/test.html #container" );-->
+<!--//                     table.innerHTML +=-->
+<!--//                         `<tr>-->
+<!--    //                             <td><div>${item.id}</td>-->
+<!--    //                             <td style="background-color: #CDCDCD"><div style="overflow: auto">${item.question}</td>-->
+<!--    //                             <td style="background-color: #E9E9E9"><div style="overflow: auto">${item.answer}</td>-->
+<!--    //                         </tr>`-->
+<!--//                 })-->
+<!--//             } else {-->
+<!--//                 document.getElementById("tbl").innerHTML =-->
+<!--//                     `<thead>-->
+<!--//                         <tr>-->
+<!--    //                             <td></td>-->
+<!--    //                             <td>No cards exist, please create some.</td>-->
+<!--    //                         </tr>-->
+<!--//                     </thead>`-->
+<!--//             }-->
+<!--//         })-->
+<!--//         .catch(error => console.log("david = an CARD error occured" + error));-->
+<!--// }-->
+<!--// console.log("calling fetchCards...")-->
+
+<!--// window.reload();-->
+
+<!--sleep:-->
+<!--for(i=0; i<5; i++) { (function(i) { setTimeout(function() { console.log(i); }, 1000*i); })(i); }-->
+
+<!--data.forEach( (item) => {-->
+<!--table.innerHTML +=-->
+<!--`<tr>-->
+<!--    <td class="tblCardTd" style="width: fit-content">${item.id}</td>-->
+<!--    <td class="tblCardTd" style="width: 45%">${item.question}</td>-->
+<!--    <td class="tblCardTd" style="width: 45%">${item.answer}</td>-->
+<!--</tr>`-->
+<!--})-->
+
+<!--<input style="width: 46%" name="question" id="question" placeholder="question + <tab>" class="input-item" required>-->
+<!--<input style="width: 46%" name="answer" id="answer" placeholder="+ answer + <enter>" class="input-item" required>-->
+<!--<button type="button" id="new-card-btn">Submit</button>-->
+
+
+
+<!--<script>-->
+<!--    function fetchCards(subjectId) {-->
+<!--        console.log("in fetchCards(), subjectId= " + subjectId);-->
+<!--        const table = document.querySelector('table');-->
+<!--        return fetch('/findCardsBySubjectId/' + subjectId)-->
+<!--            .then( (response) => response.json())-->
+<!--            .then( (data) => {-->
+<!--                console.log("data= " + JSON.parse(data));-->
+<!--                data.forEach( (item) => {-->
+<!--                    table.innerHTML += `-->
+<!--                    <tr style="width: 100%">-->
+<!--                        <td>${item.id}</td>-->
+<!--                        <td>${item.userId}</td>-->
+<!--                        <td>${item.subjectId}</td>-->
+<!--                        <td>${item.precedesCardId}</td>-->
+<!--                        <td>${item.question}</td>-->
+<!--                        <td>${item.answer}</td>-->
+<!--                    </tr>-->
+<!--                `;-->
+<!--                })-->
+<!--            })-->
+<!--            .catch((error) => console.log("error occured in findCardsBySubjectId" + error));-->
+<!--    }-->
+
+<!--    let subjectId = getSubjectId();-->
+<!--    console.log("subjectId= " + subjectId);-->
+<!--    window.onload = event => {fetchCards(subjectId)};-->
+
+<!--</script>-->
+
+<!--<thead class="fixedHeader">-->
+<!--<tr>-->
+<!--    <th style="width: 50px"><a href="#">Id</a></th>-->
+<!--    <th><a href="#">Question</a></th>-->
+<!--    <th><a href="#">Answer</a></th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody class="scrollContent">-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>12345</td>-->
+<!--    <td>Cell Content 1</td>-->
+<!--    <td>Cell Content 2</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+
+
+<!--<form name="addCard" id="addCard" method="POST" action="">-->
+<!--<form action="/addCard" method="POST">-->
+<!--    <div style="margin-top: 50px">-->
+<!--        <label>Enter new:</label>-->
+<!--        <div>-->
+<!--            <input type="hidden" name="userId" value="1"/>-->
+<!--            <input type="hidden" name="subjectId" value="1"/>-->
+<!--            <input type="hidden" name="precedesCardId" value="1"/>-->
+<!--        <div>-->
+<!--            <input name="question" id="question" placeholder="question + <tab>" class="input-item" required>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input name="answer" id="answer" placeholder="answer + <enter>" class="input-item" required>-->
+<!--        </div>-->
+<!--        <button style="margin-top: 10px">Add</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--<form>-->
+<!--    <input type="button" style="margin-top: 10px" value="Main Menu" onclick="window.location.href='subjectPage.html?subjectId=' + getSubject()">-->
+<!--</form
+
+
+<!--        'product-detail.php?product_id=$nt[product_id]'-->
+<!--        <select onchange="if (this.value) window.location.href=this.value">-->
+<!--        <select id="chooseSubject" name="subject" onchange="window.location.href='subjectPage.html?subjectId=' + ${options.value}">-->
+<!--        <select id="chooseSubject" name="subject" onchange="if (this.value) window.location.href='subjectPage.html?subjectId=' + this.value">-->
+
+
+<!--function Square(props) {-->
+<!--return (-->
+<!--<button className="square" onClick={props.onClick}>-->
+<!--    {props.value}-->
+<!--</button>-->
+<!--);-->
+<!--}-->
+
+<!--class Board extends React.Component {-->
+<!--renderSquare(i) {-->
+<!--return (-->
+<!--<Square-->
+<!--        value={this.props.squares[i]}-->
+<!--        onClick={() => this.props.onClick(i)}-->
+<!--/>-->
+<!--);-->
+<!--}-->
+
+<!--render() {-->
+<!--return (-->
+<!--<div>-->
+<!--    <div className="board-row">-->
+<!--        {this.renderSquare(0)}-->
+<!--        {this.renderSquare(1)}-->
+<!--        {this.renderSquare(2)}-->
+<!--    </div>-->
+<!--    <div className="board-row">-->
+<!--        {this.renderSquare(3)}-->
+<!--        {this.renderSquare(4)}-->
+<!--        {this.renderSquare(5)}-->
+<!--    </div>-->
+<!--    <div className="board-row">-->
+<!--        {this.renderSquare(6)}-->
+<!--        {this.renderSquare(7)}-->
+<!--        {this.renderSquare(8)}-->
+<!--    </div>-->
+<!--</div>-->
+<!--);-->
+<!--}-->
+<!--}-->
+
+<!--class Game extends React.Component {-->
+<!--constructor(props) {-->
+<!--super(props);-->
+<!--this.state = {-->
+<!--history: [-->
+<!--{-->
+<!--squares: Array(9).fill(null)-->
+<!--}-->
+<!--],-->
+<!--stepNumber: 0,-->
+<!--xIsNext: true-->
+<!--};-->
+<!--}-->
+
+<!--handleClick(i) {-->
+<!--const history = this.state.history.slice(0, this.state.stepNumber + 1);-->
+<!--const current = history[history.length - 1];-->
+<!--const squares = current.squares.slice();-->
+<!--if (calculateWinner(squares) || squares[i]) {-->
+<!--return;-->
+<!--}-->
+<!--squares[i] = this.state.xIsNext ? "X" : "O";-->
+<!--this.setState({-->
+<!--history: history.concat([-->
+<!--{-->
+<!--squares: squares-->
+<!--}-->
+<!--]),-->
+<!--stepNumber: history.length,-->
+<!--xIsNext: !this.state.xIsNext-->
+<!--});-->
+<!--}-->
+
+<!--jumpTo(step) {-->
+<!--this.setState({-->
+<!--stepNumber: step,-->
+<!--xIsNext: (step % 2) === 0-->
+<!--});-->
+<!--}-->
+
+<!--render() {-->
+<!--const history = this.state.history;-->
+<!--const current = history[this.state.stepNumber];-->
+<!--const winner = calculateWinner(current.squares);-->
+
+<!--const moves = history.map((step, move) => {-->
+<!--const desc = move ?-->
+<!--'Go to move #' + move :-->
+<!--'Go to game start';-->
+<!--return (-->
+<!--<li key={move}>-->
+<!--    <button onClick={() => this.jumpTo(move)}>{desc}</button>-->
+<!--</li>-->
+<!--);-->
+<!--});-->
+
+<!--let status;-->
+<!--if (winner) {-->
+<!--status = "Winner: " + winner;-->
+<!--} else {-->
+<!--status = "Next player: " + (this.state.xIsNext ? "X" : "O");-->
+<!--}-->
+
+<!--return (-->
+<!--<div className="game">-->
+<!--    <div className="game-board">-->
+<!--        <Board-->
+<!--                squares={current.squares}-->
+<!--                onClick={i => this.handleClick(i)}-->
+<!--        />-->
+<!--    </div>-->
+<!--    <div className="game-info">-->
+<!--        <div>{status}</div>-->
+<!--        <ol>{moves}</ol>-->
+<!--    </div>-->
+<!--</div>-->
+<!--);-->
+<!--}-->
+<!--}-->
+
+<!--// ========================================-->
+
+<!--ReactDOM.render(<Game />, document.getElementById("root"));-->
+
+<!--function calculateWinner(squares) {-->
+<!--const lines = [-->
+<!--[0, 1, 2],-->
+<!--[3, 4, 5],-->
+<!--[6, 7, 8],-->
+<!--[0, 3, 6],-->
+<!--[1, 4, 7],-->
+<!--[2, 5, 8],-->
+<!--[0, 4, 8],-->
+<!--[2, 4, 6]-->
+<!--];-->
+<!--for (let i = 0; i < lines.length; i++) {-->
+<!--const [a, b, c] = lines[i];-->
+<!--if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {-->
+<!--return squares[a];-->
+<!--}-->
+<!--}-->
+<!--return null;-->
+<!--}-->
+
+<!--    function HelloMessage() {-->
+<!--        // const name = "david";-->
+<!--        return <div>Hello {name}</div>;-->
+<!--    }-->
+
+<!--    // ReactDOM.render(-->
+<!--    //     <HelloMessage name="Taylor" />,-->
+<!--    //     document.getElementById('root')-->
+<!--    // );-->
+<!--</script>-->
+
+
+
+<!--<script type="text/javascript" src="js/src/subjectController.js"></script>-->
+<!--<input type="button" onclick="fetchUsers(URL)" value="fetchUsers">-->
+<!--<input id="users" type="button" value="List users" onclick=fetchUsersAndDisplay(); />-->
+
+<!--<script>-->
+<!--    function fetchUsers() {-->
+<!--        const table = document.querySelector('table');-->
+<!--        const URL = '/listUsers';-->
+<!--        fetch(URL)-->
+<!--            .then( (response) => response.json())-->
+<!--            .then( (data) => {-->
+<!--                data.forEach( (item) => {-->
+<!--                    table.innerHTML += `-->
+<!--                        <tr>-->
+<!--                            <td>${item.id}</td>-->
+<!--                            <td>${item.userName}</td>-->
+<!--                            <td>${item.pwd}</td>-->
+<!--                            <td>${item.currentSubject}</td>-->
+<!--                        </tr>-->
+<!--                    `;-->
+<!--                })-->
+<!--            })-->
+<!--            .catch((error) => console.log("error occured in listUsers" + error));-->
+<!--    }-->
+<!--</script>-->
+
+<!--<input id="users" type="button" value="List users" onclick=fetchUsers(); />-->
+
+<!--<p>-->
+<!--    id: <span id="id"></span><br />-->
+<!--    name: <span id="name"></span><br />-->
+<!--    password: <span id="pwd"></span><br />-->
+<!--    subjId: <span id="currentSubjectt"></span>-->
+<!---->
+<!--</p>-->
+
+<!--    <script>-->
+<!--        async function fetchUsers() {-->
+<!--            const response = await fetch('/listUsers');-->
+<!--            const data = await response.json();-->
+<!--            const {id, userName, pwd, currentSubject} = data[0];-->
+<!--            console.log(id, userName, pwd, currentSubject);-->
+<!--            document.getElementById("id").textContent = id;-->
+<!--            document.getElementById("name").textContent = userName;-->
+<!--            document.getElementById("pwd").textContent = pwd;-->
+<!--            document.getElementById("currentSubject").textContent = currentSubject;-->
+<!--        }-->
+<!--    -->
+<!--    </script>-->
+
+<!--    // console.log(dataDavidd);-->
+<!--        // document.getElementById("userList").innerText = data[0].name;-->
+
+<!--        // function fetchUsers() {-->
+<!--        //     let obj;-->
+<!--        //     return fetch('/listUsers')-->
+<!--        //         .then(res => res.json())-->
+<!--        //         .then(data => obj = data)-->
+<!--        //         .catch()-->
+<!--        // }-->
+
+<!--        // function fetchUsers() {-->
+<!--        //     const response = fetch('/listUsers');-->
+<!--        //     console.log(response);-->
+<!--        //     const data = response.json;-->
+<!--        //     console.log(data);-->
+<!--        //     console.log(data.toString());-->
+<!--        //     return data.toString();-->
+
+<!--            // console.log(data);-->
+<!--            // document.getElementById("userList").src = URL.createObjectURL(awaitJson);-->
+<!--        // }-->
+
+<!--        // let users = fetchUsers();-->
+<!--        // document.getElementById("userList").innerHTML = users.then(userList => data);-->
+<!--        // document.getElementById("userList").src = users;-->
+
+<!--        // async function fetchUsers() {-->
+<!--        //     try {-->
+<!--        //         let response = await fetch('/listUsers', {-->
+<!--        //             method: 'GET',-->
+<!--        //             credentials: 'same-origin'-->
+<!--        //         });-->
+<!--        //         return response.json();-->
+<!--        //     } catch (error) {-->
+<!--        //         console.error(error);-->
+<!--        //     }-->
+<!--        // }-->
+<!--        // let users = fetchUsers();-->
+<!--        // document.getElementById("userList").innerHTML = users.blob;-->
+<!--        //-->
+<!--        // const response = fetch('/listUsers').then(res => res.json());-->
+<!--        // function listUsers() {-->
+<!--        //     return fetch('/listUsers')-->
+<!--        //         .then(res => res.json())-->
+<!--        //         .then(data => obj = data)-->
+<!--        //     .catch()-->
+<!--        // }-->
+
+
+<!--        // function listUsers() {-->
+<!--        //     let obj;-->
+<!--        //     fetch('/listUsers')-->
+<!--        //         .then(res => res.json())-->
+<!--        //         .then(data => obj = data);-->
+<!--        //     return obj;-->
+<!--        // }-->
+<!--        //-->
+<!--        // let usersList =  listUsers();-->
+<!--        // console.log(usersList);-->
+
+
+<!--        // let fetch;-->
+<!--        // ('/listUsers')-->
+<!--        //     .then(res => res.json())-->
+<!--        //     .then(data => responseDavid = data)-->
+<!--        //     .then(() => console.log(responseDavid))-->
+
+<!--        //-->
+<!--        // let jsonresponse = response.json;-->
+<!--        // document.writeln("hey")-->
+<!--        // for (let x in response) {-->
+<!--        //     console.log(x)-->
+<!--        // document.writeln(x.toString())-->
+<!--        // }-->
+<!--        // console.log("LENGTH = " + response)-->
+<!--        // for (let i = 0; i < response.length; i++) {-->
+<!--        //     console.log(response[i])-->
+<!--        // }-->
+<!--        // async fetchExam(id) {-->
+<!--        //     try {-->
+<!--        //         const response = await fetch(`/api/exams/${id}`, {-->
+<!--        //             method: 'GET',-->
+<!--        //             credentials: 'same-origin'-->
+<!--        //         });-->
+<!--        //         const exam = await response.json();-->
+<!--        //         return exam;-->
+<!--        //     } catch (error) {-->
+<!--        //         console.error(error);-->
+<!--        //     }-->
+<!--        // }-->
+<!--<input id="listUsers"-->
+<!--       type="button"-->
+<!--       value="listUsers"-->
+<!--       onclick="fetch('/listUsers')-->
+<!--       .then(res => res.json())-->
+<!--       .then(data => console.log(data));"-->
+<!--/>-->
+
+<!--<input id="userById"-->
+<!--       onclick="fetch('/findUsersById/1')-->
+<!--       .then(res => res.json())-->
+<!--       .then(data => document.writeln(data));"-->
+<!--       type="button"-->
+<!--       value="userById"-->
+<!--/>-->
+
+
+<!--<input id="userById" type="button" value="userById" onclick="fetch('/findUsersById/1').then(res => res.json()).then(data => console.log(data));" />-->
+
+
+<!--<ol id="menu" style="animation: ease-in">-->
+<!--    <li>add subject</li>-->
+<!--    <li>list subjects</li>-->
+<!--    <li>delete subject</li>-->
+<!--    <li>review subject</li>-->
+<!--    <li>create cards</li>-->
+<!--    <li>print results</li>-->
+<!--    <li>print cards</li>-->
+<!--</ol>-->
+
+
+<!--<form action="/listUsers" method="GET">-->
+
+<!--    <input id="users" type="button" value="List users" onclick="getUsers();" />-->
+<!--<input id="users" type="button" value="List users" onclick="console.log(fetch('/findUsersById/{id}'));" />-->
+
+<!--<script>-->
+<!--    let objd;-->
+<!--    fetch('/listUsers')-->
+<!--        .then(res => res.json())-->
+<!--        .then(data => objd = JSON.parse(data))-->
+<!--        .catch(error => console.log(error));-->
+<!--    document.writeln(objd)-->
+<!--</script>-->
+
+<!--<input id="listUsers"-->
+<!--       type="button"-->
+<!--       value="listUsers"-->
+<!--       onclick="{let response=fetch('/listUsers'); let resJson = response.json; document.writeln(resJson.toString())}"-->
+<!--/>-->
+
+<!--<ol id="userList">Here are your users:</ol>-->
+
+<!--<input id="users" type="button" value="List users" onclick=fetchUsers(); />-->
+
+<!--// let date = today.getMonth()+' '+today.getDay()+', '+today.getFullYear();-->
+
+<!--// document.getElementById("displayDateTime").innerHTML = dateTime + ' <br> Day :- ' + daylist[day];-->
+
+<!--function func(url) {-->
+<!--return fetch(url)  // return this promise-->
+<!--.then(response => response.json())-->
+<!--.then(json => (json.results))-->
+<!--}-->
+
+<!--func('https://randomuser.me/api/?results=10')-->
+<!--.then(users => console.log(users))  // call `then()` on the returned promise to access users-->
+<!--.catch(err => /* handle errors */)-->
+
+
+<!--if(!Object.keys(response.data).length){-->
+<!--console.log("no data found");-->
+<!--}-->
+
+
+<!--<script>-->
+<!--    function fetchSubjects() {-->
+<!--        return fetch('/listSubjects')-->
+<!--            .then((response) => response.json())-->
+<!--            .then( (data) => {-->
+<!--                // if (data) {-->
+<!--                data.forEach( (item) => {-->
+<!--                    document.getElementById('subjectList').innerHTML += `-->
+<!--                        <tr>-->
+<!--                            <td>${item.id}</td>-->
+<!--                            <td>${item.subjectName}</td>-->
+<!--                        </tr>-->
+<!--                    `;-->
+<!--                })-->
+<!--                // } else {-->
+<!--                //     document.getElementById('subjectTable').innerHTML = "please create a subject"-->
+<!--                // }-->
+<!--            })-->
+<!--            .catch(error => console.log("an error occured" + error));-->
+<!--    }-->
+<!--    window.onload = event => {fetchSubjects();};-->
+<!--</script>-->
+
+<!--<form action="/addSubject" method="POST">-->
+<!--    <div>-->
+<!--        <label for="subjectName">Subject Name</label>-->
+<!--        <input name="subjectName" id="subjectName" value="java" class="input-item">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <button>Add subject</button>-->
+<!--    </div>-->
+
+<!-- -->
+
+// works:
+<!--<script>-->
+<!--    function fetchSubjects() {-->
+<!--        return fetch('/listSubjects')-->
+<!--            .then( (response) => response.json())-->
+<!--            .then( (data) => {-->
+<!--                if (JSON.stringify([]) !== JSON.stringify(data)) {-->
+<!--                    console.log("json subjects returned: " + JSON.stringify(data));-->
+<!--                    data.forEach( (item) => {-->
+<!--                        document.getElementById('subjectList').innerHTML += `-->
+<!--                            <tr>-->
+<!--                                <td>${item.id}</td>-->
+<!--                                <td>${item.subjectName}</td>-->
+<!--                            </tr>-->
+<!--                        `;-->
+<!--                    })-->
+<!--                } else {-->
+<!--                    document.getElementById('selectASubject').innerText = 'No subjects exist, please create one.';-->
+<!--                }-->
+<!--            })-->
+<!--            .catch(error => console.log("david = an error occured" + error));-->
+<!--    }-->
+<!--    window.onload = event => {fetchSubjects();};-->
+<!--</script>-->
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en-US"><head>-->
+<!--<meta http-equiv="content-type" content="text/html; charset=UTF-8">-->
+
+<!--<meta charset="UTF-8">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">-->
+<!--<link rel="profile" href="https://gmpg.org/xfn/11">-->
+<!--<meta name="theme-color" content="#151515">-->
+<!--<link rel="icon" sizes="192x192" href="https://navjot.mrvirk.com/icon.png">-->
+
+<!--&lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script defer="defer" src="MrVirkMedia_files/js"></script>-->
+<!--<script>-->
+<!--window.dataLayer = window.dataLayer || [];-->
+<!--function gtag(){dataLayer.push(arguments);}-->
+<!--gtag('js', new Date());-->
+<!--gtag('config', 'UA-128604739-2');-->
+<!--</script>-->
+
+<!--<script async="" src="MrVirkMedia_files/adsbygoogle.js"></script>-->
+
+<!--<meta name="robots" content="max-image-preview:large">-->
+
+<!--&lt;!&ndash; This site is optimized with the Yoast SEO plugin v14.9 - https://yoast.com/wordpress/plugins/seo/ &ndash;&gt;-->
+<!--<title>What is URL Query String ? Example and Explanation - Mr. Virk Media</title>-->
+<!--<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">-->
+<!--<link rel="canonical" href="https://mrvirk.com/what-is-url-query-string.html">-->
+<!--<meta property="og:locale" content="en_US">-->
+<!--<meta property="og:type" content="article">-->
+<!--<meta property="og:title" content="What is URL Query String ? Example and Explanation - Mr. Virk Media">-->
+<!--<meta property="og:description" content="Query string is string included in the url after a question mark (?) A Query String is the string passed to the url in the form of parameters, it can contain one or more parameters, each parameter is separated using the ampersand (&amp;) Below is a real world use-case of query string and parameters. Explanation – Lets look at the Query string breakdown In the above example, we search for a keyword “mrvirk” in Google search, and the page passes 3 parameters back to the Google server that helps G Search to provide you results for the keyword. Parameter 1…">-->
+<!--<meta property="og:url" content="https://mrvirk.com/what-is-url-query-string.html">-->
+<!--<meta property="og:site_name" content="Mr. Virk Media">-->
+<!--<meta property="article:published_time" content="2022-02-03T00:29:30+00:00">-->
+<!--<meta property="article:modified_time" content="2022-02-03T00:29:32+00:00">-->
+<!--<meta property="og:image" content="https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?fit=1920%2C1080&amp;ssl=1">-->
+<!--<meta property="og:image:width" content="1920">-->
+<!--<meta property="og:image:height" content="1080">-->
+<!--<meta name="twitter:card" content="summary_large_image">-->
+<!--<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mrvirk.com/#website","url":"https://mrvirk.com/","name":"Mr. Virk Media","description":"Investing Made Simple as a Pie","potentialAction":[{"@type":"SearchAction","target":"https://mrvirk.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://mrvirk.com/what-is-url-query-string.html#primaryimage","inLanguage":"en-US","url":"https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?fit=1920%2C1080&ssl=1","width":1920,"height":1080,"caption":"What is Query String ?"},{"@type":"WebPage","@id":"https://mrvirk.com/what-is-url-query-string.html#webpage","url":"https://mrvirk.com/what-is-url-query-string.html","name":"What is URL Query String ? Example and Explanation - Mr. Virk Media","isPartOf":{"@id":"https://mrvirk.com/#website"},"primaryImageOfPage":{"@id":"https://mrvirk.com/what-is-url-query-string.html#primaryimage"},"datePublished":"2022-02-03T00:29:30+00:00","dateModified":"2022-02-03T00:29:32+00:00","author":{"@id":"https://mrvirk.com/#/schema/person/629c5df018b2e4d2826b9fcd53c4b4b3"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://mrvirk.com/what-is-url-query-string.html"]}]},{"@type":"Person","@id":"https://mrvirk.com/#/schema/person/629c5df018b2e4d2826b9fcd53c4b4b3","name":"Navjot Singh Virk","image":{"@type":"ImageObject","@id":"https://mrvirk.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/fa82885ced160400409610083e317847?s=96&d=monsterid&r=g","caption":"Navjot Singh Virk"},"description":"Navjot is a Hobby Blogger from Ireland and loves to create content to help people. He makes time on weekends to work on this blog. And has a full time position at Workday as Technical Product Manager, which he loves and thrives at. His Skills include in-depth knowledge of SEO, Javascript, Advertising, HTML, Java and Product Management. And his other hobbies include Investing, Gardening and playing Table Tennis.","sameAs":["https://ie.linkedin.com/in/navjotvirk","https://www.youtube.com/channel/UC442qeNVRRNJy878t-MEltA"]}]}</script>-->
+<!--&lt;!&ndash; / Yoast SEO plugin. &ndash;&gt;-->
+
+
+<!--<link rel="dns-prefetch" href="https://secure.gravatar.com/">-->
+<!--<link rel="dns-prefetch" href="https://s.w.org/">-->
+<!--<link rel="dns-prefetch" href="https://v0.wordpress.com/">-->
+<!--<link rel="dns-prefetch" href="https://widgets.wp.com/">-->
+<!--<link rel="dns-prefetch" href="https://s0.wp.com/">-->
+<!--<link rel="dns-prefetch" href="https://0.gravatar.com/">-->
+<!--<link rel="dns-prefetch" href="https://1.gravatar.com/">-->
+<!--<link rel="dns-prefetch" href="https://2.gravatar.com/">-->
+<!--<link rel="dns-prefetch" href="https://i0.wp.com/">-->
+<!--<link rel="dns-prefetch" href="https://i1.wp.com/">-->
+<!--<link rel="dns-prefetch" href="https://i2.wp.com/">-->
+<!--<link rel="dns-prefetch" href="https://c0.wp.com/">-->
+<!--<link rel="alternate" type="application/rss+xml" title="Mr. Virk Media » Feed" href="https://mrvirk.com/feed">-->
+<!--<link rel="alternate" type="application/rss+xml" title="Mr. Virk Media » Comments Feed" href="https://mrvirk.com/comments/feed">-->
+<!--<link rel="alternate" type="application/rss+xml" title="Mr. Virk Media » What is URL Query String ? Example and Explanation Comments Feed" href="https://mrvirk.com/what-is-url-query-string.html/feed">-->
+<!--<script type="text/javascript">-->
+<!--window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mrvirk.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.5"}};-->
+<!--!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);-->
+<!--</script><script src="MrVirkMedia_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>-->
+<!--<style type="text/css">-->
+<!--img.wp-smiley,-->
+<!--img.emoji {-->
+<!--display: inline !important;-->
+<!--border: none !important;-->
+<!--box-shadow: none !important;-->
+<!--height: 1em !important;-->
+<!--width: 1em !important;-->
+<!--margin: 0 .07em !important;-->
+<!--vertical-align: -0.1em !important;-->
+<!--background: none !important;-->
+<!--padding: 0 !important;-->
+<!--}-->
+<!--</style>-->
+<!--<noscript><link rel='stylesheet' href='https://mrvirk.com/wp-content/themes/blocksy/static/bundle/no-scripts.css' type='text/css' /></noscript>-->
+<!--<style id="ct-main-styles-inline-css" type="text/css">.site-logo-container {&#45;&#45;maxHeight:73px;}.site-title {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:25px;&#45;&#45;linkInitialColor:var(&#45;&#45;paletteColor4);}.header-menu-1 {&#45;&#45;menuItemsSpacing:54px;&#45;&#45;menuIndicatorActiveColor:var(&#45;&#45;paletteColor1);}.header-menu-1 > ul {&#45;&#45;height:100%;}.header-menu-1> ul > li > a {&#45;&#45;fontWeight:700;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;&#45;&#45;lineHeight:1.3;}.header-menu-1 > ul > li > a {&#45;&#45;linkInitialColor:var(&#45;&#45;color);&#45;&#45;colorHoverType3:#ffffff;}.header-menu-1 .sub-menu {&#45;&#45;fontWeight:500;&#45;&#45;fontSize:12px;&#45;&#45;linkInitialColor:#ffffff;&#45;&#45;dropDownDivider:1px dashed rgba(255, 255, 255, 0.1);&#45;&#45;backgroundColor:#29333C;&#45;&#45;boxShadow:0px 10px 20px rgba(41, 51, 61, 0.1);&#45;&#45;borderRadius:2px;}header [data-row="middle"] {&#45;&#45;height:120px;}[data-row="middle"] {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#ffffff;&#45;&#45;borderTop:none;&#45;&#45;boxShadow:none;}[data-row="middle"] > div {&#45;&#45;borderTop:none;}.mobile-menu {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:30px;&#45;&#45;linkInitialColor:#ffffff;}#offcanvas {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:rgba(18, 21, 25, 0.98);}[data-behaviour*="side"] {&#45;&#45;boxShadow:0px 0px 70px rgba(0, 0, 0, 0.35);}.ct-header-search {&#45;&#45;linkInitialColor:var(&#45;&#45;color);}#search-modal {&#45;&#45;linkInitialColor:#ffffff;&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:rgba(18, 21, 25, 0.98);}header [data-row="top"] {&#45;&#45;height:50px;}[data-row="top"] {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#f9f9f9;&#45;&#45;borderTop:none;&#45;&#45;boxShadow:none;}[data-row="top"] > div {&#45;&#45;borderTop:none;}.ct-header-trigger {&#45;&#45;linkInitialColor:var(&#45;&#45;color);&#45;&#45;secondColor:#eeeeee;&#45;&#45;secondColorHover:#eeeeee;}.ct-footer-copyright {&#45;&#45;fontWeight:400;&#45;&#45;fontSize:15px;&#45;&#45;lineHeight:1.3;}[data-column="copyright"] {&#45;&#45;horizontal-alignment:center;&#45;&#45;vertical-alignment:flex-start;}.footer-menu {&#45;&#45;menuItemsSpacing:25px;}[data-column="menu"] {&#45;&#45;alignment:flex-start;&#45;&#45;vertical-alignment:flex-start;}.footer-menu ul {&#45;&#45;fontWeight:700;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;&#45;&#45;lineHeight:1.3;}.footer-menu > ul > li > a {&#45;&#45;linkInitialColor:var(&#45;&#45;color);}.site-footer [data-row="top"] > div {&#45;&#45;itemsGap:60px;&#45;&#45;containerSpacing:30px;&#45;&#45;gridTemplateColummns:repeat(2, 1fr);}.site-footer [data-row="top"] .widget-title {&#45;&#45;fontSize:16px;}.site-footer [data-row="top"] .ct-widget {&#45;&#45;linkInitialColor:var(&#45;&#45;color);}.site-footer [data-row="top"] [data-divider="columns"] {&#45;&#45;border:none;}.site-footer [data-row="top"] {&#45;&#45;borderTop:none;&#45;&#45;borderBottom:none;&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#eef0f4;}.site-footer {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#f4f5f8;}:root {&#45;&#45;fontFamily:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';&#45;&#45;fontWeight:400;&#45;&#45;textTransform:none;&#45;&#45;textDecoration:none;&#45;&#45;fontSize:17px;&#45;&#45;lineHeight:1.65;&#45;&#45;letterSpacing:0em;&#45;&#45;buttonFontWeight:500;&#45;&#45;buttonFontSize:15px;&#45;&#45;formFontSize:15px;&#45;&#45;formInputHeight:45px;&#45;&#45;formBorderInitialColor:#e0e5eb;&#45;&#45;formBorderFocusColor:var(&#45;&#45;paletteColor1);&#45;&#45;formBorderSize:1px;&#45;&#45;radioCheckboxInitialColor:#d5d8de;&#45;&#45;radioCheckboxAccentColor:var(&#45;&#45;paletteColor1);&#45;&#45;paletteColor1:#2872fa;&#45;&#45;paletteColor2:#1559ed;&#45;&#45;paletteColor3:rgba(36,59,86,0.9);&#45;&#45;paletteColor4:rgba(36,59,86,1);&#45;&#45;paletteColor5:#ffffff;&#45;&#45;color:var(&#45;&#45;paletteColor3);&#45;&#45;linkInitialColor:var(&#45;&#45;paletteColor1);&#45;&#45;linkHoverColor:var(&#45;&#45;paletteColor2);&#45;&#45;selectionTextColor:#ffffff;&#45;&#45;selectionBackgroundColor:var(&#45;&#45;paletteColor1);&#45;&#45;headingColor:var(&#45;&#45;paletteColor4);&#45;&#45;contentSpacing:1.5em;&#45;&#45;buttonMinHeight:45px;&#45;&#45;buttonBorderRadius:3px;&#45;&#45;buttonTextInitialColor:#ffffff;&#45;&#45;buttonTextHoverColor:#ffffff;&#45;&#45;buttonInitialColor:var(&#45;&#45;paletteColor1);&#45;&#45;buttonHoverColor:var(&#45;&#45;paletteColor2);&#45;&#45;maxSiteWidth:1290px;&#45;&#45;narrowContainer:750px;&#45;&#45;wideOffset:130px;}h1 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:40px;&#45;&#45;lineHeight:1.5;}h2 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:35px;&#45;&#45;lineHeight:1.5;}h3 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:30px;&#45;&#45;lineHeight:1.5;}h4 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:25px;&#45;&#45;lineHeight:1.5;}h5 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:20px;&#45;&#45;lineHeight:1.5;}h6 {&#45;&#45;fontWeight:700;&#45;&#45;fontSize:16px;&#45;&#45;lineHeight:1.5;}.wp-block-quote.is-style-large p, .wp-block-pullquote p, .ct-quote-widget blockquote {&#45;&#45;fontFamily:Georgia;&#45;&#45;fontWeight:600;&#45;&#45;fontSize:25px;}code, kbd, samp, pre {&#45;&#45;fontFamily:monospace;&#45;&#45;fontWeight:400;&#45;&#45;fontSize:16px;}.ct-sidebar .widget-title {&#45;&#45;fontSize:18px;}.entry-summary > .product_title {&#45;&#45;fontSize:30px;}body {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:var(&#45;&#45;paletteColor5);}.entry-header .page-title {&#45;&#45;fontSize:32px;}.entry-header .entry-meta {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;&#45;&#45;lineHeight:1.5;}.entry-header .ct-breadcrumbs {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;}.hero-section[data-type="type-2"] {&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#EDEFF2;}.ct-pagination {&#45;&#45;spacing:80px;}.ct-pagination[data-divider] {&#45;&#45;border:none;}.ct-pagination[data-type="simple"] {&#45;&#45;colorActive:#ffffff;}[data-prefix="blog"] .entry-card .entry-title {&#45;&#45;fontSize:20px;&#45;&#45;lineHeight:1.3;}[data-prefix="blog"] .entry-excerpt {&#45;&#45;fontSize:16px;}[data-prefix="blog"] .entry-card .entry-meta {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;}[data-prefix="blog"] .entry-button[data-type="outline"] {&#45;&#45;colorHover:#ffffff;}[data-prefix="blog"] [data-cards="boxed"] .entry-card {&#45;&#45;cardBackground:#ffffff;&#45;&#45;border:none;&#45;&#45;cardSpacing:35px;&#45;&#45;boxShadow:0px 12px 18px -6px rgba(34, 56, 101, 0.04);}[data-prefix="blog"] [data-cards="simple"] .entry-card {&#45;&#45;border:1px dashed rgba(224, 229, 235, 0.8);}[data-prefix="categories"] .entry-card .entry-title {&#45;&#45;fontSize:20px;&#45;&#45;lineHeight:1.3;}[data-prefix="categories"] .entry-excerpt {&#45;&#45;fontSize:16px;}[data-prefix="categories"] .entry-card .entry-meta {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;}[data-prefix="categories"] .entry-button[data-type="outline"] {&#45;&#45;colorHover:#ffffff;}[data-prefix="categories"] [data-cards="boxed"] .entry-card {&#45;&#45;cardBackground:#ffffff;&#45;&#45;border:none;&#45;&#45;cardSpacing:35px;&#45;&#45;boxShadow:0px 12px 18px -6px rgba(34, 56, 101, 0.04);}[data-prefix="categories"] [data-cards="simple"] .entry-card {&#45;&#45;border:1px dashed rgba(224, 229, 235, 0.8);}[data-prefix="author"] .entry-card .entry-title {&#45;&#45;fontSize:20px;&#45;&#45;lineHeight:1.3;}[data-prefix="author"] .entry-excerpt {&#45;&#45;fontSize:16px;}[data-prefix="author"] .entry-card .entry-meta {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;}[data-prefix="author"] .entry-button[data-type="outline"] {&#45;&#45;colorHover:#ffffff;}[data-prefix="author"] [data-cards="boxed"] .entry-card {&#45;&#45;cardBackground:#ffffff;&#45;&#45;border:none;&#45;&#45;cardSpacing:35px;&#45;&#45;boxShadow:0px 12px 18px -6px rgba(34, 56, 101, 0.04);}[data-prefix="author"] [data-cards="simple"] .entry-card {&#45;&#45;border:1px dashed rgba(224, 229, 235, 0.8);}[data-prefix="search"] .entry-card .entry-title {&#45;&#45;fontSize:20px;&#45;&#45;lineHeight:1.3;}[data-prefix="search"] .entry-excerpt {&#45;&#45;fontSize:16px;}[data-prefix="search"] .entry-card .entry-meta {&#45;&#45;fontWeight:600;&#45;&#45;textTransform:uppercase;&#45;&#45;fontSize:12px;}[data-prefix="search"] .entry-button[data-type="outline"] {&#45;&#45;colorHover:#ffffff;}[data-prefix="search"] [data-cards="boxed"] .entry-card {&#45;&#45;cardBackground:#ffffff;&#45;&#45;border:none;&#45;&#45;cardSpacing:35px;&#45;&#45;boxShadow:0px 12px 18px -6px rgba(34, 56, 101, 0.04);}[data-prefix="search"] [data-cards="simple"] .entry-card {&#45;&#45;border:1px dashed rgba(224, 229, 235, 0.8);}form textarea {&#45;&#45;formInputHeight:170px;}.content-area {&#45;&#45;contentAreaSpacing:80px;}[data-sidebar] {&#45;&#45;sidebarWidth:27%;&#45;&#45;sidebarWidthNoUnit:27;&#45;&#45;sidebarGap:4%;&#45;&#45;sidebarOffset:50px;}.ct-sidebar {&#45;&#45;linkInitialColor:var(&#45;&#45;color);&#45;&#45;sidebarWidgetsSpacing:60px;}[data-sidebar] > aside {&#45;&#45;sidebarBackgroundColor:var(&#45;&#45;paletteColor5);&#45;&#45;sidebarInnerSpacing:35px;}aside[data-type="type-2"] {&#45;&#45;border:none;&#45;&#45;boxShadow:0px 12px 18px -6px rgba(34, 56, 101, 0.04);}aside[data-type="type-3"] {&#45;&#45;border:1px solid rgba(224, 229, 235, 0.8);}.ct-back-to-top {&#45;&#45;size:12px;&#45;&#45;bottom:25px;&#45;&#45;color:#ffffff;&#45;&#45;colorHover:#ffffff;&#45;&#45;backgroundColor:var(&#45;&#45;paletteColor3);&#45;&#45;backgroundColorHover:var(&#45;&#45;paletteColor4);}.ct-passepartout {&#45;&#45;passepartoutSize:10px;&#45;&#45;passepartoutColor:var(&#45;&#45;paletteColor1);}[data-prefix="single_blog_post"] .ct-share-box[data-location="top"] {&#45;&#45;margin:70px;}[data-prefix="single_blog_post"] .ct-share-box[data-location="bottom"] {&#45;&#45;margin:70px;}[data-prefix="single_blog_post"] .ct-share-box[data-type="type-1"] {&#45;&#45;linkInitialColor:var(&#45;&#45;color);}[data-prefix="single_blog_post"] .ct-related-posts-container {&#45;&#45;padding:70px;&#45;&#45;backgroundImage:none;&#45;&#45;backgroundColor:#eff1f5;&#45;&#45;visibility:block;}[data-prefix="single_blog_post"] .ct-related-posts {&#45;&#45;visibility:grid;}[data-prefix="single_blog_post"] .related-entry-title {&#45;&#45;linkInitialColor:var(&#45;&#45;color);}</style>-->
+<!--<style id="ct-main-styles-tablet-inline-css" type="text/css" media="(max-width: 999.98px)">header [data-row="middle"] {&#45;&#45;height:70px;}.site-footer [data-row="top"] > div {&#45;&#45;gridTemplateColummns:initial;}.entry-header .page-title {&#45;&#45;fontSize:30px;}.ct-pagination {&#45;&#45;spacing:60px;}.content-area {&#45;&#45;contentAreaSpacing:60px;}.ct-sidebar {&#45;&#45;sidebarWidgetsSpacing:40px;}[data-prefix="single_blog_post"] .ct-share-box[data-location="top"] {&#45;&#45;margin:50px;}[data-prefix="single_blog_post"] .ct-share-box[data-location="bottom"] {&#45;&#45;margin:50px;}[data-prefix="single_blog_post"] .ct-related-posts-container {&#45;&#45;padding:50px;&#45;&#45;visibility:none;}[data-prefix="single_blog_post"] .ct-related-posts {&#45;&#45;visibility:none;}</style>-->
+<!--<style id="ct-main-styles-mobile-inline-css" type="text/css" media="(max-width: 689.98px)">.mobile-menu {&#45;&#45;fontSize:23px;}.footer-menu {&#45;&#45;menuItemsSpacing:20px;}[data-column="menu"] {&#45;&#45;alignment:center;}.site-footer [data-row="top"] > div {&#45;&#45;gridTemplateColummns:initial;}.entry-header .page-title {&#45;&#45;fontSize:25px;}.ct-pagination {&#45;&#45;spacing:50px;}[data-prefix="blog"] .entry-card .entry-title {&#45;&#45;fontSize:18px;}[data-prefix="blog"] [data-cards="boxed"] .entry-card {&#45;&#45;cardSpacing:25px;}[data-prefix="categories"] .entry-card .entry-title {&#45;&#45;fontSize:18px;}[data-prefix="categories"] [data-cards="boxed"] .entry-card {&#45;&#45;cardSpacing:25px;}[data-prefix="author"] .entry-card .entry-title {&#45;&#45;fontSize:18px;}[data-prefix="author"] [data-cards="boxed"] .entry-card {&#45;&#45;cardSpacing:25px;}[data-prefix="search"] .entry-card .entry-title {&#45;&#45;fontSize:18px;}[data-prefix="search"] [data-cards="boxed"] .entry-card {&#45;&#45;cardSpacing:25px;}.content-area {&#45;&#45;contentAreaSpacing:50px;}.ct-sidebar {&#45;&#45;sidebarWidgetsSpacing:30px;}.ct-passepartout {&#45;&#45;passepartoutSize:0px;}[data-prefix="single_blog_post"] .ct-share-box[data-location="top"] {&#45;&#45;margin:30px;}[data-prefix="single_blog_post"] .ct-share-box[data-location="bottom"] {&#45;&#45;margin:30px;}[data-prefix="single_blog_post"] .ct-related-posts-container {&#45;&#45;padding:30px;}</style>-->
+<!--<link rel="stylesheet" id="wp-block-library-css" href="MrVirkMedia_files/style.css" type="text/css" media="all">-->
+<!--<style id="wp-block-library-inline-css" type="text/css">-->
+<!--.has-text-align-justify{text-align:justify;}-->
+<!--</style>-->
+<!--<link rel="stylesheet" id="ez-icomoon-css" href="MrVirkMedia_files/style_002.css" type="text/css" media="all">-->
+<!--<link rel="stylesheet" id="ez-toc-css" href="MrVirkMedia_files/screen.css" type="text/css" media="all">-->
+<!--<style id="ez-toc-inline-css" type="text/css">-->
+<!--div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 95%;}-->
+<!--</style>-->
+<!--<link rel="stylesheet" id="ct-main-styles-css" href="MrVirkMedia_files/main.css" type="text/css" media="all">-->
+<!--<link rel="stylesheet" id="jetpack_css-css" href="MrVirkMedia_files/jetpack.css" type="text/css" media="all">-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/jquery.js" id="jquery-core-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/jquery-migrate.js" id="jquery-migrate-js"></script>-->
+<!--<script type="text/javascript" id="jetpack_related-posts-js-extra">-->
+<!--/* <![CDATA[ */-->
+<!--var related_posts_js_options = {"post_heading":"h4"};-->
+<!--/* ]]> */-->
+<!--</script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/related-posts.js" id="jetpack_related-posts-js"></script>-->
+<!--<link rel="https://api.w.org/" href="https://mrvirk.com/wp-json/"><link rel="alternate" type="application/json" href="https://mrvirk.com/wp-json/wp/v2/posts/3361"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mrvirk.com/xmlrpc.php?rsd">-->
+<!--<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mrvirk.com/wp-includes/wlwmanifest.xml">-->
+<!--<meta name="generator" content="WordPress 5.7.5">-->
+<!--<link rel="shortlink" href="https://wp.me/pahXFm-Sd">-->
+<!--<link rel="alternate" type="application/json+oembed" href="https://mrvirk.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html">-->
+<!--<link rel="alternate" type="text/xml+oembed" href="https://mrvirk.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html&amp;format=xml">-->
+<!--<style type="text/css">img#wpstats{display:none}</style><link rel="icon" href="MrVirkMedia_files/embed_data/cropped-mrvirk-mobile-logo-v3_002.webp" sizes="32x32">-->
+<!--<link rel="icon" href="https://i2.wp.com/mrvirk.com/wp-content/uploads/2018/05/cropped-mrvirk-mobile-logo-v3.png?fit=192%2C192&amp;ssl=1" sizes="192x192">-->
+<!--<link rel="apple-touch-icon" href="https://i2.wp.com/mrvirk.com/wp-content/uploads/2018/05/cropped-mrvirk-mobile-logo-v3.png?fit=180%2C180&amp;ssl=1">-->
+<!--<meta name="msapplication-TileImage" content="https://i2.wp.com/mrvirk.com/wp-content/uploads/2018/05/cropped-mrvirk-mobile-logo-v3.png?fit=270%2C270&amp;ssl=1">-->
+<!--<script charset="utf-8" src="MrVirkMedia_files/10.js"></script><script charset="utf-8" src="MrVirkMedia_files/0.js"></script><script charset="utf-8" src="MrVirkMedia_files/1.js"></script><script charset="utf-8" src="MrVirkMedia_files/2.js"></script><script charset="utf-8" src="MrVirkMedia_files/3.js"></script></head>-->
+
+<!--<body data-rsssl="1" class="post-template-default single single-post postid-3361 single-format-standard" data-link="type-1" data-forms="classic" data-prefix="single_blog_post">-->
+
+<!--<a class="skip-link show-on-focus" href="#primary">-->
+<!--Skip to content</a>-->
+
+
+<!--<div id="main-container">-->
+<!--<header id="header"><div data-device="desktop"><div data-row="top" data-columns="3"><div class="ct-container"><div data-column="start"></div><div data-column="middle"><div data-items="">-->
+<!--<nav id="header-menu-1" class="header-menu-1" data-id="menu" data-type="type-1" data-dropdown-animation="type-1">-->
+
+<!--<ul id="menu-menu" class="menu"><li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19" data-submenu="right"><a href="https://mrvirk.com/?referrer=blog-menu">Home<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-2990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2990"><a href="https://mrvirk.com/privacy-policy">Privacy Policy</a></li>-->
+<!--<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18"><a href="https://navjot.mrvirk.com/?referrer=blog-menu">About me<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-2462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2462"><a href="https://navjot.mrvirk.com/">Profile</a></li>-->
+<!--<li id="menu-item-2459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2459"><a href="https://github.com/virksaabnavjot">Github</a></li>-->
+<!--<li id="menu-item-2460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2460"><a href="https://www.linkedin.com/in/navjotvirk/">LinkedIn</a></li>-->
+<!--<li id="menu-item-2461" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2461"><a href="https://www.youtube.com/channel/UC442qeNVRRNJy878t-MEltA?view_as=subscriber">Youtube</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li id="menu-item-2993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2993"><a href="#">More<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-2991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2991"><a href="https://mrvirk.com/contact-us">Contact us</a></li>-->
+<!--<li id="menu-item-2992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2992"><a href="https://mrvirk.com/about-us">About us</a></li>-->
+<!--<li id="menu-item-2200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200"><a href="https://mrvirk.com/navsingh-org-uk">Navsingh.org.uk</a></li>-->
+<!--<li id="menu-item-3686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3686"><a href="https://mrvirk.com/sp500/">S&amp;P 500 Companies Directory</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li id="menu-item-3685" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3685"><a href="https://mrvirk.com/category/article">How to Articles ?</a></li>-->
+<!--<li id="menu-item-4356" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4356"><a href="https://mrvirk.com/category/investing">Investing</a></li>-->
+<!--<li id="menu-item-3577" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3577"><a href="https://mrvirk.com/category/javascript">Javascript</a></li>-->
+<!--<li id="menu-item-455" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-455"><a href="https://mrvirk.com/category/web-design">Web Design</a></li>-->
+<!--<li id="menu-item-3596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3596" data-submenu="right"><a href="#">Calculators<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-3949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3949"><a href="#">Finance<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-3948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3948"><a href="https://mrvirk.com/dividend-calculator/">Dividend Calculator</a></li>-->
+<!--<li id="menu-item-4086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4086"><a href="https://mrvirk.com/compound-interest-calculator/">Compound Interest Calculator</a></li>-->
+<!--<li id="menu-item-3687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3687"><a href="https://mrvirk.com/profit-calculator/">Profit Calculator</a></li>-->
+<!--<li id="menu-item-3693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3693"><a href="https://mrvirk.com/vat-calculator/">VAT Calculator</a></li>-->
+<!--<li id="menu-item-3938" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3938"><a href="https://mrvirk.com/discount-calculator/">Discount Calculator</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li id="menu-item-3950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3950"><a href="#">Math<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li id="menu-item-3597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3597"><a href="https://mrvirk.com/percentage-calculator/">Percentage Calculator</a></li>-->
+<!--<li id="menu-item-3940" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3940"><a href="https://mrvirk.com/exponents-calculator/">Exponents Calculator</a></li>-->
+<!--<li id="menu-item-3939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3939"><a href="https://mrvirk.com/percent-off-calculator/">Percent Off Calculator</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</nav>-->
+
+<!--</div></div><div data-column="end" data-placements="1"><div data-items="secondary">-->
+<!--<div class="ct-header-search " data-id="search">-->
+
+<!--<a href="#search-modal" aria-label="Search">-->
+<!--<svg viewBox="0 0 10 10">-->
+<!--<path d="M9.7,9.7c-0.4,0.4-1,0.4-1.3,0L6.7,8.1C6.1,8.5,5.3,8.8,4.4,8.8C2,8.8,0,6.8,0,4.4S2,0,4.4,0s4.4,2,4.4,4.4-->
+<!--c0,0.9-0.3,1.7-0.7,2.4l1.7,1.7C10.1,8.8,10.1,9.4,9.7,9.7z M4.4,1.3c-1.7,0-3.1,1.4-3.1,3.1s1.4,3.1,3.1,3.1c1.7,0,3.1-1.4,3.1-3.1-->
+<!--S6.1,1.3,4.4,1.3z"></path>-->
+<!--</svg>-->
+<!--</a>-->
+<!--</div>-->
+<!--</div></div></div></div><div data-row="middle" data-columns="1"><div class="ct-container"><div data-column="middle"><div data-items="">-->
+<!--<div class="site-branding" data-id="logo">-->
+
+<!--<a href="https://mrvirk.com/" class="site-logo-container" rel="home"><img src="MrVirkMedia_files/mrvirk-mobile-logo-v3.webp" class="default-logo" alt="mrvirk logo for mobile" loading="lazy" width="909" height="208"></a>-->
+<!--</div>-->
+
+<!--</div></div></div></div></div><div data-device="mobile"><div data-row="middle" data-columns="2"><div class="ct-container"><div data-column="start" data-placements="1"><div data-items="primary">-->
+<!--<div class="site-branding" data-id="logo">-->
+
+<!--<a href="https://mrvirk.com/" class="site-logo-container" rel="home"><img src="MrVirkMedia_files/mrvirk-mobile-logo-v3.webp" class="default-logo" alt="mrvirk logo for mobile" loading="lazy" width="909" height="208"></a>-->
+<!--</div>-->
+
+<!--</div></div><div data-column="end" data-placements="1"><div data-items="primary">-->
+<!--<a href="#offcanvas" class="ct-header-trigger" data-design="simple" aria-label="Menu" data-id="trigger">-->
+
+<!--<span class="ct-trigger" data-type="type-1">-->
+<!--<span></span>-->
+<!--</span>-->
+
+<!--<span class="ct-label" hidden="">-->
+<!--Menu	</span>-->
+<!--</a>-->
+
+<!--</div></div></div></div></div></header>-->
+<!--<main id="main" class="site-main">-->
+
+
+<!--<section class="hero-section" data-type="type-2">-->
+
+<!--<header class="entry-header ct-container-narrow">-->
+<!--<h1 class="page-title">What is URL Query String ? Example and Explanation</h1><ul class="entry-meta" data-type="simple:slash"><li class="meta-author"><a href="https://mrvirk.com/author/admin_navsingh" class="ct-image-container-static ct-lazy-loaded"><img data-ct-lazy="https://secure.gravatar.com/avatar/fa82885ced160400409610083e317847?s=50&amp;d=monsterid&amp;r=g" data-object-fit="~" style="height:25px" alt="Default image" class="initial loaded" src="MrVirkMedia_files/fa82885ced160400409610083e317847.png" data-was-processed="true" width="25" height="25"><noscript><img src="https://secure.gravatar.com/avatar/fa82885ced160400409610083e317847?s=50&d=monsterid&r=g" data-object-fit="~" width="25" height="25" style="height:25px" alt="Default image" ></noscript></a><a class="ct-meta-element-author" href="https://mrvirk.com/author/admin_navsingh" title="Posts by Navjot Singh Virk" rel="author">Navjot Singh Virk</a></li><li class="meta-date"><time class="ct-meta-element-date" datetime="2022-02-03T01:29:30+01:00">February 3, 2022</time></li><li class="meta-categories" data-type="simple"><a href="https://mrvirk.com/category/article" rel="tag">How to Articles ?</a>, <a href="https://mrvirk.com/category/knowledge-base" rel="tag">Knowledge Base</a>, <a href="https://mrvirk.com/category/web-design" rel="tag">Web Design</a></li></ul>	</header>-->
+<!--</section>-->
+
+
+
+<!--<div id="primary" class="content-area" data-v-spacing="top:bottom">-->
+<!--<div class="ct-container" data-sidebar="right">-->
+
+<!--<section>-->
+
+
+
+<!--<article id="post-3361" class="post-3361 post type-post status-publish format-standard has-post-thumbnail hentry category-article category-knowledge-base category-web-design" data-structure="default:wide">-->
+
+<!--<figure class="ct-featured-image ct-hidden-sm"><div class="ct-image-container ct-lazy-loaded"><img class="attachment-full size-full initial loaded" alt="What is Query String ?" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" data-ct-lazy="https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?fit=1920%2C1080&amp;ssl=1" data-ct-lazy-set="https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?w=1920&amp;ssl=1 1920w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=696%2C392&amp;ssl=1 696w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=1068%2C601&amp;ssl=1 1068w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=747%2C420&amp;ssl=1 747w" data-object-fit="~" srcset="MrVirkMedia_files/What-is-Query-String.webp 1920w, MrVirkMedia_files/What-is-Query-String_003.webp 300w, MrVirkMedia_files/What-is-Query-String_005.webp 768w, MrVirkMedia_files/What-is-Query-String_008.webp 1024w, MrVirkMedia_files/What-is-Query-String_004.webp 696w, MrVirkMedia_files/What-is-Query-String_007.webp 1068w, MrVirkMedia_files/What-is-Query-String_006.webp 747w" src="MrVirkMedia_files/What-is-Query-String_002.webp" data-was-processed="true" width="1920" height="1080"><noscript><img width="1920" height="1080" src="https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?fit=1920%2C1080&amp;ssl=1" class="attachment-full size-full" alt="What is Query String ?" loading="lazy" srcset="https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?w=1920&amp;ssl=1 1920w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=300%2C169&amp;ssl=1 300w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=768%2C432&amp;ssl=1 768w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=1024%2C576&amp;ssl=1 1024w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=696%2C392&amp;ssl=1 696w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=1068%2C601&amp;ssl=1 1068w, https://i2.wp.com/mrvirk.com/wp-content/uploads/2019/09/What-is-Query-String.png?resize=747%2C420&amp;ssl=1 747w" sizes="(max-width: 1920px) 100vw, 1920px" /></noscript><span class="ct-ratio" style="padding-bottom: 56.3%"></span></div><figcaption>What is Query String ?</figcaption></figure>-->
+
+<!--<div class="entry-content">-->
+<!--<div id="ez-toc-container" class="ez-toc-v2_0_11 counter-hierarchy counter-decimal ez-toc-grey">-->
+<!--<div class="ez-toc-title-container">-->
+<!--<p class="ez-toc-title">Page Contents</p>-->
+<!--<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>-->
+<!--<nav><ul class="ez-toc-list ez-toc-list-level-1" style="display: none;"><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="#Explanation_%E2%80%93_Lets_look_at_the_Query_string_breakdown" title="Explanation – Lets look at the Query string breakdown ">Explanation – Lets look at the Query string breakdown </a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="#Video_Tutorial" title="Video Tutorial">Video Tutorial</a></li></ul></nav></div>-->
+
+<!--<p>Query string is string included in the url after a question mark (<strong>?)</strong></p>-->
+
+
+
+<!--<p>A Query String is the string passed to the url in the form of-->
+<!--parameters, it can contain one or more parameters, each parameter is-->
+<!--separated using the ampersand (<strong>&amp;)</strong></p>-->
+
+
+
+<!--<p>Below is a real world use-case of query string and parameters.</p>-->
+
+
+
+<!--<figure class="wp-block-image"><img loading="lazy" src="MrVirkMedia_files/url-query-string-example-with-3-parameters_003.webp" alt="Query String Example" class="wp-image-3359" srcset="MrVirkMedia_files/url-query-string-example-with-3-parameters.webp 782w, MrVirkMedia_files/url-query-string-example-with-3-parameters_004.webp 300w, MrVirkMedia_files/url-query-string-example-with-3-parameters_002.webp 768w, MrVirkMedia_files/url-query-string-example-with-3-parameters_005.webp 696w" sizes="(max-width: 782px) 100vw, 782px" data-recalc-dims="1" width="782" height="154"><figcaption>Query String Example</figcaption></figure>-->
+
+
+
+<!--<div align="center">-->
+<!--&lt;!&ndash; Mrvirk.com | Top | In-Article LREC Unit &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6088722940843183" data-ad-slot="4635377958"></ins>-->
+<!--<script>-->
+<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+<!--</div>-->
+
+
+
+<!--<h3><span class="ez-toc-section" id="Explanation_%E2%80%93_Lets_look_at_the_Query_string_breakdown"></span>Explanation – Lets look at the Query string breakdown <span class="ez-toc-section-end"></span></h3>-->
+
+
+
+<!--<p>In the above example, we search for a keyword “mrvirk” in Google-->
+<!--search, and the page passes 3 parameters back to the Google server that-->
+<!--helps G Search to provide you results for the keyword.</p>-->
+
+
+
+<!--<ul><li>Parameter 1 (client=firefox-b-d): tells google what browser user is on, in my case its Firefox</li><li>Parameter 2 (channel=trow): tells google the channel</li><li>Parameter 3 (q=mrvirk): tells google what the user searched for, in this case mrvirk</li></ul>-->
+
+
+
+<!--<h3><span class="ez-toc-section" id="Video_Tutorial"></span>Video Tutorial<span class="ez-toc-section-end"></span></h3>-->
+
+
+
+<!--<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">-->
+<!--<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" src="MrVirkMedia_files/kybCYJ2loTc.html" allowfullscreen="true" style="border:0;" width="1290" height="726"></iframe></span>-->
+<!--</div></figure>-->
+
+
+
+<!--<p>You can play around and learn more about making use of Query String and Parameters in real world project in the article below –</p>-->
+
+
+
+<!--<figure class="wp-block-embed-wordpress wp-block-embed is-type-wp-embed is-provider-mr-virk-media"><div class="wp-block-embed__wrapper">-->
+<!--<blockquote class="wp-embedded-content" data-secret="QLN8kGae51" style="display: none;"><a href="https://mrvirk.com/get-url-parameter-values-in-javascript.html">Vanilla Javascript to Get URL Parameter Values /Query String</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" title="“Vanilla Javascript to Get URL Parameter Values /Query String” — Mr. Virk Media" src="MrVirkMedia_files/embed.html" data-secret="QLN8kGae51" marginwidth="0" marginheight="0" scrolling="no" width="600" height="643" frameborder="0"></iframe>-->
+<!--</div></figure>-->
+
+
+
+<!--<div align="center">-->
+<!--&lt;!&ndash; Mrvirk.com | Bottom | In-Article LREC Unit &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6088722940843183" data-ad-slot="5897604724"></ins>-->
+<!--<script>-->
+<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+<!--</div>-->
+
+<!--<div id="jp-relatedposts" class="jp-relatedposts">-->
+
+<!--</div>		</div>-->
+
+
+
+
+<!--<div class="ct-share-box" data-location="bottom" data-type="type-1">-->
+
+<!--<div>-->
+
+<!--<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html" target="_blank" rel="noopener noreferrer" data-network="facebook" aria-label="Facebook">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M20,10.1c0-5.5-4.5-10-10-10S0,4.5,0,10.1c0,5,3.7,9.1,8.4,9.9v-7H5.9v-2.9h2.5V7.9C8.4,5.4,9.9,4,12.2,4c1.1,0,2.2,0.2,2.2,0.2v2.5h-1.3c-1.2,0-1.6,0.8-1.6,1.6v1.9h2.8L13.9,13h-2.3v7C16.3,19.2,20,15.1,20,10.1z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--Facebook					</span>-->
+<!--</a>-->
+
+<!--<a href="https://twitter.com/share?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html&amp;text=What%20is%20URL%20Query%20String%20%3F%20Example%20and%20Explanation" target="_blank" rel="noopener noreferrer" data-network="twitter" aria-label="Twitter">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M20,3.8c-0.7,0.3-1.5,0.5-2.4,0.6c0.8-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1c-0.7-0.8-1.8-1.3-3-1.3c-2.3,0-4.1,1.8-4.1,4.1c0,0.3,0,0.6,0.1,0.9C6.4,6.7,3.4,5.1,1.4,2.6C1,3.2,0.8,3.9,0.8,4.7c0,1.4,0.7,2.7,1.8,3.4C2,8.1,1.4,7.9,0.8,7.6c0,0,0,0,0,0.1c0,2,1.4,3.6,3.3,4c-0.3,0.1-0.7,0.1-1.1,0.1c-0.3,0-0.5,0-0.8-0.1c0.5,1.6,2,2.8,3.8,2.8c-1.4,1.1-3.2,1.8-5.1,1.8c-0.3,0-0.7,0-1-0.1c1.8,1.2,4,1.8,6.3,1.8c7.5,0,11.7-6.3,11.7-11.7c0-0.2,0-0.4,0-0.5C18.8,5.3,19.4,4.6,20,3.8z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--Twitter					</span>-->
+<!--</a>-->
+
+<!--<a href="#" target="_blank" rel="noopener noreferrer" data-network="pinterest" aria-label="Pinterest">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M10,0C4.5,0,0,4.5,0,10c0,4.1,2.5,7.6,6,9.2c0-0.7,0-1.5,0.2-2.3c0.2-0.8,1.3-5.4,1.3-5.4s-0.3-0.6-0.3-1.6c0-1.5,0.9-2.6,1.9-2.6c0.9,0,1.3,0.7,1.3,1.5c0,0.9-0.6,2.3-0.9,3.5c-0.3,1.1,0.5,1.9,1.6,1.9c1.9,0,3.2-2.4,3.2-5.3c0-2.2-1.5-3.8-4.2-3.8c-3,0-4.9,2.3-4.9,4.8c0,0.9,0.3,1.5,0.7,2C6,12,6.1,12.1,6,12.4c0,0.2-0.2,0.6-0.2,0.8c-0.1,0.3-0.3,0.3-0.5,0.3c-1.4-0.6-2-2.1-2-3.8c0-2.8,2.4-6.2,7.1-6.2c3.8,0,6.3,2.8,6.3,5.7c0,3.9-2.2,6.9-5.4,6.9c-1.1,0-2.1-0.6-2.4-1.2c0,0-0.6,2.3-0.7,2.7c-0.2,0.8-0.6,1.5-1,2.1C8.1,19.9,9,20,10,20c5.5,0,10-4.5,10-10C20,4.5,15.5,0,10,0z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--Pinterest					</span>-->
+<!--</a>-->
+
+<!--<a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html&amp;title=What%20is%20URL%20Query%20String%20%3F%20Example%20and%20Explanation" target="_blank" rel="noopener noreferrer" data-network="linkedin" aria-label="LinkedIn">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M18.6,0H1.4C0.6,0,0,0.6,0,1.4v17.1C0,19.4,0.6,20,1.4,20h17.1c0.8,0,1.4-0.6,1.4-1.4V1.4C20,0.6,19.4,0,18.6,0z M6,17.1h-3V7.6h3L6,17.1L6,17.1zM4.6,6.3c-1,0-1.7-0.8-1.7-1.7s0.8-1.7,1.7-1.7c0.9,0,1.7,0.8,1.7,1.7C6.3,5.5,5.5,6.3,4.6,6.3z M17.2,17.1h-3v-4.6c0-1.1,0-2.5-1.5-2.5c-1.5,0-1.8,1.2-1.8,2.5v4.7h-3V7.6h2.8v1.3h0c0.4-0.8,1.4-1.5,2.8-1.5c3,0,3.6,2,3.6,4.5V17.1z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--LinkedIn					</span>-->
+<!--</a>-->
+
+<!--<a href="https://reddit.com/submit?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html&amp;title=What%20is%20URL%20Query%20String%20%3F%20Example%20and%20Explanation" target="_blank" rel="noopener noreferrer" data-network="reddit" aria-label="Reddit">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M11.7,0.9c-0.9,0-2,0.7-2.1,3.9c0.1,0,0.3,0,0.4,0c0.2,0,0.3,0,0.5,0c0.1-1.9,0.6-3.1,1.3-3.1c0.3,0,0.5,0.2,0.8,0.5c0.4,0.4,0.9,0.9,1.8,1.1c0-0.1,0-0.2,0-0.4c0-0.2,0-0.4,0.1-0.5c-0.6-0.2-0.9-0.5-1.2-0.8C12.8,1.3,12.4,0.9,11.7,0.9z M16.9,1.3c-1,0-1.7,0.8-1.7,1.7s0.8,1.7,1.7,1.7s1.7-0.8,1.7-1.7S17.9,1.3,16.9,1.3z M10,5.7c-5.3,0-9.5,2.7-9.5,6.5s4.3,6.9,9.5,6.9s9.5-3.1,9.5-6.9S15.3,5.7,10,5.7z M2.4,6.1c-0.6,0-1.2,0.3-1.7,0.7C0,7.5-0.2,8.6,0.2,9.5C0.9,8.2,2,7.1,3.5,6.3C3.1,6.2,2.8,6.1,2.4,6.1z M17.6,6.1c-0.4,0-0.7,0.1-1.1,0.3c1.5,0.8,2.6,1.9,3.2,3.2c0.4-0.9,0.3-2-0.5-2.7C18.8,6.3,18.2,6.1,17.6,6.1z M6.5,9.6c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3S5.8,9.6,6.5,9.6z M13.5,9.6c0.7,0,1.3,0.6,1.3,1.3s-0.6,1.3-1.3,1.3s-1.3-0.6-1.3-1.3S12.8,9.6,13.5,9.6z M6.1,14.3c0.1,0,0.2,0.1,0.3,0.2c0,0.1,1.1,1.4,3.6,1.4c2.6,0,3.6-1.4,3.6-1.4c0.1-0.2,0.4-0.2,0.6-0.1c0.2,0.1,0.2,0.4,0.1,0.6c-0.1,0.1-1.3,1.8-4.3,1.8c-3,0-4.2-1.7-4.3-1.8c-0.1-0.2-0.1-0.5,0.1-0.6C5.9,14.4,6,14.3,6.1,14.3z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--Reddit					</span>-->
+<!--</a>-->
+
+<!--<a href="https://t.me/share/url?url=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html&amp;text=What%20is%20URL%20Query%20String%20%3F%20Example%20and%20Explanation" target="_blank" rel="noopener noreferrer" data-network="telegram" aria-label="Telegram">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M19.9,3.1l-3,14.2c-0.2,1-0.8,1.3-1.7,0.8l-4.6-3.4l-2.2,2.1c-0.2,0.2-0.5,0.5-0.9,0.5l0.3-4.7L16.4,5c0.4-0.3-0.1-0.5-0.6-0.2L5.3,11.4L0.7,10c-1-0.3-1-1,0.2-1.5l17.7-6.8C19.5,1.4,20.2,1.9,19.9,3.1z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--Telegram					</span>-->
+<!--</a>-->
+
+<!--<a href="whatsapp://send?text=https%3A%2F%2Fmrvirk.com%2Fwhat-is-url-query-string.html" target="_blank" rel="noopener noreferrer" data-network="whatsapp" aria-label="WhatsApp">-->
+
+<!--<svg width="20px" height="20px" viewBox="0 0 20 20">-->
+<!--<path d="M10,0C4.5,0,0,4.5,0,10c0,1.9,0.5,3.6,1.4,5.1L0.1,20l5-1.3C6.5,19.5,8.2,20,10,20c5.5,0,10-4.5,10-10S15.5,0,10,0zM6.6,5.3c0.2,0,0.3,0,0.5,0c0.2,0,0.4,0,0.6,0.4c0.2,0.5,0.7,1.7,0.8,1.8c0.1,0.1,0.1,0.3,0,0.4C8.3,8.2,8.3,8.3,8.1,8.5C8,8.6,7.9,8.8,7.8,8.9C7.7,9,7.5,9.1,7.7,9.4c0.1,0.2,0.6,1.1,1.4,1.7c0.9,0.8,1.7,1.1,2,1.2c0.2,0.1,0.4,0.1,0.5-0.1c0.1-0.2,0.6-0.7,0.8-1c0.2-0.2,0.3-0.2,0.6-0.1c0.2,0.1,1.4,0.7,1.7,0.8s0.4,0.2,0.5,0.3c0.1,0.1,0.1,0.6-0.1,1.2c-0.2,0.6-1.2,1.1-1.7,1.2c-0.5,0-0.9,0.2-3-0.6c-2.5-1-4.1-3.6-4.2-3.7c-0.1-0.2-1-1.3-1-2.6c0-1.2,0.6-1.8,0.9-2.1C6.1,5.4,6.4,5.3,6.6,5.3z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-label">-->
+<!--WhatsApp					</span>-->
+<!--</a>-->
+
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!--<div class="author-box ct-hidden-sm" data-type="type-2">-->
+<!--<a href="https://mrvirk.com/author/admin_navsingh" class="ct-image-container ct-lazy"><img data-ct-lazy="https://secure.gravatar.com/avatar/fa82885ced160400409610083e317847?s=120&amp;d=monsterid&amp;r=g" data-object-fit="~" alt="Default image" width="60" height="60">-->
+<!--<svg width="18px" height="13px" viewBox="0 0 20 15">-->
+<!--<polygon points="14.5,2 13.6,2.9 17.6,6.9 0,6.9 0,8.1 17.6,8.1 13.6,12.1 14.5,13 20,7.5 "></polygon>-->
+<!--</svg>-->
+<!--<noscript><img src="https://secure.gravatar.com/avatar/fa82885ced160400409610083e317847?s=120&d=monsterid&r=g" data-object-fit="~" width="60" height="60" alt="Default image" ></noscript><span class="ct-ratio" style="padding-bottom: 100%"></span></a>-->
+<!--<section>-->
+<!--<h5 class="author-box-name">Navjot Singh Virk</h5>-->
+
+<!--<div class="author-box-bio">-->
+<!--Navjot is a Hobby Blogger from Ireland and loves to create content-->
+<!--to help people. He makes time on weekends to work on this blog. And has a-->
+<!--full time position at Workday as Technical Product Manager, which he-->
+<!--loves and thrives at.-->
+
+<!--His Skills include in-depth knowledge of SEO, Javascript, Advertising,-->
+<!--HTML, Java and Product Management. And his other hobbies include-->
+<!--Investing, Gardening and playing Table Tennis.			</div>-->
+
+
+<!--<div class="author-box-social">-->
+
+<!--<a href="https://navjot.mrvirk.com/" target="_blank" rel="noopener noreferrer">-->
+<!--<svg width="20px" height="20px" viewBox="0 0 24 24">-->
+<!--<path d="M12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm8.3 7.2h-3.5c-.5-2.2-1.7-4.3-1.7-4.3s3.4 1 5.2 4.3zm-8.3-4.8s1.5 2.1 2.3 4.8h-4.6c.9-2.9 2.3-4.8 2.3-4.8zm-9.3 12s-.7-2.2 0-4.8h4.1c-.4 2.2 0 4.8 0 4.8h-4.1zm1 2.4h3.5c.7 2.7 1.7 4.3 1.7 4.3-3.7-1.3-5.2-4.3-5.2-4.3zm3.5-9.6h-3.5c1.9-3.3 5.2-4.3 5.2-4.3s-1.2 2.1-1.7 4.3zm4.8 14.4s-1.6-2.3-2.3-4.8h4.6c-.7 2.5-2.3 4.8-2.3 4.8zm2.8-7.2h-5.6s-.4-2.4 0-4.8h5.6c.4 2.2 0 4.8 0 4.8zm.3 6.7s1.2-2.2 1.7-4.3h3.5c-1.9 3.3-5.2 4.3-5.2 4.3zm2.1-6.7s.4-2.5 0-4.8h4.1c.7 2.6 0 4.8 0 4.8h-4.1z"></path>-->
+<!--</svg>-->
+
+<!--<span class="ct-tooltip-top">-->
+<!--Website					</span>-->
+<!--</a>-->
+
+
+
+<!--<a href="https://ie.linkedin.com/in/navjotvirk" target="_blank" rel="noopener noreferrer">-->
+<!--<svg width="20px" height="20px" viewBox="0 0 24 24">-->
+<!--<path d="M5.2,24H0.1V6.9h5.1V24z M24,24h-5.1v-9.1c0-2.4-0.8-3.6-2.5-3.6c-1.3,0-2.2,0.7-2.6,2c0,2.2,0,10.7,0,10.7H8.6c0,0,0.1-15.4,0-17.1h4l0.3,3.4h0.1c1.1-1.7,2.7-2.9,5-2.9c1.8,0,3.2,0.5,4.2,1.7c1.1,1.2,1.6,2.9,1.6,5.2V24z"></path>-->
+<!--<ellipse cx="2.6" cy="2.6" rx="2.6" ry="2.6"></ellipse>-->
+<!--</svg>-->
+
+<!--<span class="ct-tooltip-top">-->
+<!--Linked In					</span>-->
+<!--</a>-->
+
+
+<!--</div>-->
+
+<!--</section>-->
+<!--</div>-->
+
+
+<!--</article>-->
+
+
+<!--&lt;!&ndash; Mrvirk.com | Link Ad | Article Bottom &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6088722940843183" data-ad-slot="3253529046" data-ad-format="link" data-full-width-responsive="true"></ins>-->
+
+<!--<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>-->
+
+
+
+<!--</section>-->
+
+
+<!--<aside class="ct-hidden-sm ct-hidden-md" data-type="type-4" id="sidebar">-->
+
+<!--<div class="ct-sidebar" data-sticky="">-->
+<!--<div class="ct-widget widget_search">-->
+
+<!--<form role="search" method="get" class="search-form" action="https://mrvirk.com/" data-live-results="">-->
+<!--<div class="ct-search-input">-->
+<!--<input type="search" placeholder="Search" name="s" autocomplete="off" title="Search Input">-->
+
+<!--<button class="search-submit" aria-label="Search">-->
+<!--<span hidden="">Search</span>-->
+<!--<svg width="12px" height="12px" viewBox="0 0 24 24">-->
+
+<!--<path d="M23.3,23.3c-0.9,0.9-2.3,0.9-3.2,0l-4-4c-1.6,1-3.6,1.7-5.7,1.7C4.7,21,0,16.3,0,10.5S4.7,0,10.5,0C16.3,0,21,4.7,21,10.5-->
+<!--c0,2.1-0.6,4-1.7,5.7l4,4C24.2,21,24.2,22.5,23.3,23.3z M10.5,3C6.4,3,3,6.4,3,10.5S6.4,18,10.5,18c4.1,0,7.5-3.4,7.5-7.5-->
+<!--C18,6.4,14.7,3,10.5,3z"></path>-->
+<!--</svg>-->
+
+<!--<span data-loader="circles"><span></span><span></span><span></span></span>-->
+<!--</button>-->
+
+
+<!--</div>-->
+<!--</form>-->
+
+
+<!--</div><div class="widget_text ct-widget widget_custom_html"><div class="textwidget entry-content custom-html-widget"><div align="center">-->
+
+<!--&lt;!&ndash; Mrvirk.com | Sidebar MON Unit &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-6088722940843183" data-ad-slot="5606174420"></ins>-->
+<!--<script>-->
+<!--window.onload = function(){-->
+<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--};-->
+<!--</script>-->
+
+
+
+<!--</div>-->
+<!--</div></div>-->
+<!--<div class="ct-widget widget_recent_entries">-->
+<!--<span class="widget-title">Recent Posts</span>-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="https://mrvirk.com/how-to-install-wordpress-on-mac-using-mamp.html">How to Install WordPress Locally on Mac using MAMP ? Step by Step</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="https://mrvirk.com/javascript-to-calculate-age-from-date-of-birth.html">Vanilla Javascript Calculate Age from Date of Birth – Step by Step</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="https://mrvirk.com/how-to-find-app-bundle-id-ios.html">How to Find Bundle ID of an iOS app ? Step by Step</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="https://mrvirk.com/what-is-url-query-string.html" aria-current="page">What is URL Query String ? Example and Explanation</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="https://mrvirk.com/add-code-to-elementor-page-in-wordpress.html">How to add JavaScript Pixel to Elementor Page in WordPress ?</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--</div><div class="widget_text ct-widget widget_custom_html"><div class="textwidget entry-content custom-html-widget"><div align="center">-->
+<!--&lt;!&ndash; Mrvirk.com | Sidebar LREC Unit &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6088722940843183" data-ad-slot="4992271806"></ins>-->
+<!--<script>-->
+<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+<!--</div>-->
+
+
+
+<!--</div></div><div class="ct-widget widget_categories"><span class="widget-title">Categories</span>-->
+<!--<ul>-->
+<!--<li class="cat-item cat-item-28"><a href="https://mrvirk.com/category/git">Git</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-1"><a href="https://mrvirk.com/category/article">How to Articles ?</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-241"><a href="https://mrvirk.com/category/immigration">Immigration</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-259"><a href="https://mrvirk.com/category/investing">Investing</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-244"><a href="https://mrvirk.com/category/investing/investing-basics">Investing Basics</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-235"><a href="https://mrvirk.com/category/javascript">Javascript</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-234"><a href="https://mrvirk.com/category/knowledge-base">Knowledge Base</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-181"><a href="https://mrvirk.com/category/news">News</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-242"><a href="https://mrvirk.com/category/react">React.js</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-115"><a href="https://mrvirk.com/category/seo">Search Engine Optimisation</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-260"><a href="https://mrvirk.com/category/investing/stock-analysis">Stock Analysis</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-180"><a href="https://mrvirk.com/category/news/technology-news" title="Technology News. This category contains the latest technology news. One of the quality places to get your news.">Technology News</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-10"><a href="https://mrvirk.com/category/web-design">Web Design</a>-->
+<!--</li>-->
+<!--<li class="cat-item cat-item-199"><a href="https://mrvirk.com/category/web-design/wordpress" title="Find the best and premium content on Wordpress - Tutorials, Articles, Videos, News, Updates and much more.">Wordpress</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--</div><div class="widget_text ct-widget widget_custom_html"><div class="textwidget entry-content custom-html-widget"><div align="center">-->
+<!--&lt;!&ndash; Mrvirk.com | Sidebar LREC Unit &ndash;&gt;-->
+<!--<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6088722940843183" data-ad-slot="4992271806"></ins>-->
+<!--<script>-->
+<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+<!--</script>-->
+
+<!--</div>-->
+<!--</div></div><div class="ct-widget widget_nav_menu"><span class="widget-title">Financial Calculators</span><div class="menu-calculators-menu-container"><ul id="menu-calculators-menu" class="widget-menu"><li id="menu-item-4392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4392"><a href="https://mrvirk.com/vat-calculator/?blog">VAT Calculator</a></li>-->
+<!--<li id="menu-item-4390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4390"><a href="https://mrvirk.com/dividend-calculator/?blog">Dividend Calculator</a></li>-->
+<!--<li id="menu-item-4394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4394"><a href="https://mrvirk.com/discount-calculator/?blog">Discount Calculator</a></li>-->
+<!--<li id="menu-item-4391" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4391"><a href="https://mrvirk.com/profit-calculator/?blog">Capital Gains Calculator</a></li>-->
+<!--<li id="menu-item-4393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4393"><a href="https://mrvirk.com/compound-interest-calculator/?blog">Compound Interest Calculator</a></li>-->
+<!--</ul></div></div>		</div>-->
+<!--</aside>-->
+
+
+<!--</div>-->
+
+<!--</div>-->
+
+
+<!--<div class="ct-related-posts-container">-->
+<!--<div class="ct-container">-->
+
+<!--<div class="ct-related-posts" data-columns="3">-->
+<!--<h3 class="ct-block-title">-->
+<!--Related Posts			</h3>-->
+
+
+<!--<article>-->
+<!--<a class="ct-image-container ct-lazy" href="https://mrvirk.com/how-to-install-wordpress-on-mac-using-mamp.html" aria-label="How to Install WordPress Locally on Mac using MAMP ? Step by Step"><img class="attachment-medium size-medium" alt="How to Install WordPress on Mac using MAMP" loading="lazy" data-ct-lazy="https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?fit=300%2C169&amp;ssl=1" data-ct-lazy-set="https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?w=2270&amp;ssl=1 2270w, https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?resize=1536%2C863&amp;ssl=1 1536w, https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?resize=2048%2C1151&amp;ssl=1 2048w" data-object-fit="~" width="300" height="169"><noscript><img width="300" height="169" src="https://i0.wp.com/mrvirk.com/wp-content/uploads/2021/03/How-to-Install-WordPress-on-Mac-using-MAMP.png?fit=300%2C169&amp;ssl=1" class="attachment-medium size-medium" alt="How to Install WordPress on Mac using MAMP" loading="lazy" /></noscript><span class="ct-ratio" style="padding-bottom: 56.3%"></span></a>-->
+<!--<h3 class="related-entry-title">-->
+<!--<a href="https://mrvirk.com/how-to-install-wordpress-on-mac-using-mamp.html">How to Install WordPress Locally on Mac using MAMP ? Step by Step</a>-->
+<!--</h3>-->
+
+<!--<ul class="entry-meta" data-type="simple:slash"><li class="meta-date"><time class="ct-meta-element-date" datetime="2022-02-07T01:48:33+01:00">February 7, 2022</time></li></ul>				</article>-->
+
+<!--<article>-->
+<!--<a class="ct-image-container ct-lazy" href="https://mrvirk.com/javascript-to-calculate-age-from-date-of-birth.html" aria-label="Vanilla Javascript Calculate Age from Date of Birth – Step by Step"><img class="attachment-medium size-medium" alt="Javascript to Calculate Age from Date of Birth" loading="lazy" data-ct-lazy="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?fit=300%2C169&amp;ssl=1" data-ct-lazy-set="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?w=1920&amp;ssl=1 1920w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=696%2C392&amp;ssl=1 696w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=1068%2C601&amp;ssl=1 1068w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?resize=747%2C420&amp;ssl=1 747w" data-object-fit="~" width="300" height="169"><noscript><img width="300" height="169" src="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/02/Javascript-to-Calculate-Age-from-Date-of-Birth.png?fit=300%2C169&amp;ssl=1" class="attachment-medium size-medium" alt="Javascript to Calculate Age from Date of Birth" loading="lazy" /></noscript><span class="ct-ratio" style="padding-bottom: 56.3%"></span></a>-->
+<!--<h3 class="related-entry-title">-->
+<!--<a href="https://mrvirk.com/javascript-to-calculate-age-from-date-of-birth.html">Vanilla Javascript Calculate Age from Date of Birth – Step by Step</a>-->
+<!--</h3>-->
+
+<!--<ul class="entry-meta" data-type="simple:slash"><li class="meta-date"><time class="ct-meta-element-date" datetime="2022-02-03T01:30:30+01:00">February 3, 2022</time></li></ul>				</article>-->
+
+<!--<article>-->
+<!--<a class="ct-image-container ct-lazy" href="https://mrvirk.com/how-to-find-app-bundle-id-ios.html" aria-label="How to Find Bundle ID of an iOS app ? Step by Step"><img class="attachment-medium size-medium" alt="Get Bundle Id of an iOS Ap" loading="lazy" data-ct-lazy="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?fit=300%2C169&amp;ssl=1" data-ct-lazy-set="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?w=2280&amp;ssl=1 2280w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=300%2C169&amp;ssl=1 300w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=768%2C432&amp;ssl=1 768w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=1024%2C576&amp;ssl=1 1024w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=696%2C391&amp;ssl=1 696w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=1068%2C601&amp;ssl=1 1068w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=747%2C420&amp;ssl=1 747w, https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?resize=1920%2C1080&amp;ssl=1 1920w" data-object-fit="~" width="300" height="169"><noscript><img width="300" height="169" src="https://i1.wp.com/mrvirk.com/wp-content/uploads/2019/06/Get-Bundle-Id-of-an-iOS-App.png?fit=300%2C169&amp;ssl=1" class="attachment-medium size-medium" alt="Get Bundle Id of an iOS Ap" loading="lazy" /></noscript><span class="ct-ratio" style="padding-bottom: 56.3%"></span></a>-->
+<!--<h3 class="related-entry-title">-->
+<!--<a href="https://mrvirk.com/how-to-find-app-bundle-id-ios.html">How to Find Bundle ID of an iOS app ? Step by Step</a>-->
+<!--</h3>-->
+
+<!--<ul class="entry-meta" data-type="simple:slash"><li class="meta-date"><time class="ct-meta-element-date" datetime="2022-02-03T01:29:58+01:00">February 3, 2022</time></li></ul>				</article>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--</main>-->
+
+<!--<footer class="site-footer"><div data-row="top"><div class="ct-container" data-stack="tablet"><div data-column="copyright">-->
+<!--<div class="ct-footer-copyright">-->
+
+<!--<p>Copyright © 2022&nbsp; -&nbsp; &nbsp;Mr. Virk Media</p></div>-->
+<!--</div><div data-column="menu">-->
+<!--<nav id="footer-menu" class="footer-menu">-->
+
+<!--<ul id="menu-calculators-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4392"><a href="https://mrvirk.com/vat-calculator/?blog">VAT Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4390"><a href="https://mrvirk.com/dividend-calculator/?blog">Dividend Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4394"><a href="https://mrvirk.com/discount-calculator/?blog">Discount Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4391"><a href="https://mrvirk.com/profit-calculator/?blog">Capital Gains Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4393"><a href="https://mrvirk.com/compound-interest-calculator/?blog">Compound Interest Calculator</a></li>-->
+<!--</ul>-->
+<!--</nav>-->
+<!--</div></div></div></footer></div>-->
+
+
+<!--<a href="#" class="ct-back-to-top ct-hidden-sm" data-shape="square" data-alignment="right" title="Go to top" aria-label="Go to top">-->
+
+<!--<svg width="12" height="12" viewBox="0 0 20 20"><path d="M10,0L9.4,0.6L0.8,9.1l1.2,1.2l7.1-7.1V20h1.7V3.3l7.1,7.1l1.2-1.2l-8.5-8.5L10,0z"></path></svg>-->
+
+<!--</a>-->
+
+
+<!--<div id="search-modal" class="ct-panel" data-behaviour="modal">-->
+<!--<div class="close-button">-->
+<!--<span class="ct-trigger closed">-->
+<!--<span></span>-->
+<!--</span>-->
+<!--</div>-->
+
+<!--<div class="content-container" data-align="middle">-->
+
+
+<!--<form role="search" method="get" class="search-form" action="https://mrvirk.com/" data-live-results="">-->
+<!--<div class="ct-search-input">-->
+<!--<input type="search" class="modal-field" placeholder="Search" name="s" autocomplete="off" title="Search Input">-->
+
+<!--<button class="search-submit" aria-label="Search">-->
+<!--<span hidden="">Search</span>-->
+<!--<svg width="12px" height="12px" viewBox="0 0 24 24">-->
+
+<!--<path d="M23.3,23.3c-0.9,0.9-2.3,0.9-3.2,0l-4-4c-1.6,1-3.6,1.7-5.7,1.7C4.7,21,0,16.3,0,10.5S4.7,0,10.5,0C16.3,0,21,4.7,21,10.5-->
+<!--c0,2.1-0.6,4-1.7,5.7l4,4C24.2,21,24.2,22.5,23.3,23.3z M10.5,3C6.4,3,3,6.4,3,10.5S6.4,18,10.5,18c4.1,0,7.5-3.4,7.5-7.5-->
+<!--C18,6.4,14.7,3,10.5,3z"></path>-->
+<!--</svg>-->
+
+<!--<span data-loader="circles"><span></span><span></span><span></span></span>-->
+<!--</button>-->
+
+
+<!--<input type="hidden" name="ct_post_type" value="post:page:product">-->
+<!--</div>-->
+<!--</form>-->
+
+
+<!--</div>-->
+<!--</div>-->
+
+<!--<div id="offcanvas" class="ct-panel" data-behaviour="right-side" data-device="mobile"><div class="close-button">-->
+<!--<span class="ct-trigger closed">-->
+<!--<span></span>-->
+<!--</span>-->
+<!--</div><div class="content-container"><section data-align="left">-->
+<!--<nav class="mobile-menu has-submenu" data-id="mobile-menu" data-type="type-1">-->
+<!--<ul id="menu-menu-1" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19"><a href="https://mrvirk.com/?referrer=blog-menu">Home<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2990"><a href="https://mrvirk.com/privacy-policy">Privacy Policy</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18"><a href="https://navjot.mrvirk.com/?referrer=blog-menu">About me<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2462"><a href="https://navjot.mrvirk.com/">Profile</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2459"><a href="https://github.com/virksaabnavjot">Github</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2460"><a href="https://www.linkedin.com/in/navjotvirk/">LinkedIn</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2461"><a href="https://www.youtube.com/channel/UC442qeNVRRNJy878t-MEltA?view_as=subscriber">Youtube</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2993"><a href="#">More<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2991"><a href="https://mrvirk.com/contact-us">Contact us</a></li>-->
+<!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2992"><a href="https://mrvirk.com/about-us">About us</a></li>-->
+<!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200"><a href="https://mrvirk.com/navsingh-org-uk">Navsingh.org.uk</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3686"><a href="https://mrvirk.com/sp500/">S&amp;P 500 Companies Directory</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3685"><a href="https://mrvirk.com/category/article">How to Articles ?</a></li>-->
+<!--<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4356"><a href="https://mrvirk.com/category/investing">Investing</a></li>-->
+<!--<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3577"><a href="https://mrvirk.com/category/javascript">Javascript</a></li>-->
+<!--<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-455"><a href="https://mrvirk.com/category/web-design">Web Design</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3596"><a href="#">Calculators<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3949"><a href="#">Finance<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3948"><a href="https://mrvirk.com/dividend-calculator/">Dividend Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4086"><a href="https://mrvirk.com/compound-interest-calculator/">Compound Interest Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3687"><a href="https://mrvirk.com/profit-calculator/">Profit Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3693"><a href="https://mrvirk.com/vat-calculator/">VAT Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3938"><a href="https://mrvirk.com/discount-calculator/">Discount Calculator</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3950"><a href="#">Math<span class="child-indicator"><svg width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a>-->
+<!--<ul class="sub-menu">-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3597"><a href="https://mrvirk.com/percentage-calculator/">Percentage Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3940"><a href="https://mrvirk.com/exponents-calculator/">Exponents Calculator</a></li>-->
+<!--<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3939"><a href="https://mrvirk.com/percent-off-calculator/">Percent Off Calculator</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul></nav>-->
+<!--</section></div></div><script type="text/javascript" src="MrVirkMedia_files/photon.js" id="jetpack-photon-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/events.js" id="ct-events-js"></script>-->
+<!--<script type="text/javascript" id="ct-scripts-js-extra">-->
+<!--/* <![CDATA[ */-->
+<!--var ct_localizations = {"ajax_url":"https:\/\/mrvirk.com\/wp-admin\/admin-ajax.php","nonce":"448a064909","public_url":"https:\/\/mrvirk.com\/wp-content\/themes\/blocksy\/static\/bundle\/","rest_url":"https:\/\/mrvirk.com\/wp-json\/","search_url":"https:\/\/mrvirk.com\/search\/QUERY_STRING","show_more_text":"Show more","more_text":"More","internet_explorer_template":"<div class=\"ct-unsuported-browser\">\n\t<svg width=\"120px\" height=\"120px\" viewBox=\"0 0 100 100\">\n\t\t<path d=\"M14.8,54.7c-1.3,0-2.3-1-2.3-2.3v-4.7c0-1.3,1-2.3,2.3-2.3s2.3,1,2.3,2.3v4.7C17.2,53.7,16.1,54.7,14.8,54.7zM35.6,79.6l-4.1-2.3c-1.1-0.6-2.6-0.2-3.2,0.9s-0.2,2.6,0.9,3.2l4.1,2.3c0.4,0.2,0.8,0.3,1.2,0.3c0.8,0,1.6-0.4,2-1.2C37.1,81.7,36.7,80.2,35.6,79.6z M68.4,77.3l-4.1,2.3c-1.1,0.6-1.5,2.1-0.9,3.2c0.5,0.8,1.2,1.2,2,1.2c0.4,0,0.8-0.1,1.2-0.3l4.1-2.3c1.1-0.6,1.5-2.1,0.9-3.2S69.5,76.6,68.4,77.3zM82.8,47.7v4.7c0,1.3,1,2.3,2.3,2.3s2.3-1,2.3-2.3v-4.7c0-1.3-1-2.3-2.3-2.3S82.8,46.3,82.8,47.7zM70.8,18.7l-4.1-2.3c-1.1-0.6-2.6-0.2-3.2,0.9s-0.2,2.6,0.9,3.2l4.1,2.3c0.4,0.2,0.8,0.3,1.2,0.3c0.8,0,1.6-0.4,2-1.2C72.3,20.8,71.9,19.3,70.8,18.7zM33.3,16.3l-4.1,2.3c-1.1,0.6-1.5,2.1-0.9,3.2c0.5,0.8,1.2,1.2,2,1.2c0.4,0,0.8-0.1,1.2-0.3l4.1-2.3c1.1-0.6,1.5-2.1,0.9-3.2S34.4,15.7,33.3,16.3z M60.2,10.2c0,5.6-4.5,10.2-10.2,10.2s-10.2-4.5-10.2-10.2S44.4,0,50,0S60.2,4.5,60.2,10.2zM55.5,10.2c0-3-2.4-5.5-5.5-5.5s-5.5,2.4-5.5,5.5s2.4,5.5,5.5,5.5S55.5,13.2,55.5,10.2z M60.2,89.8c0,5.6-4.5,10.2-10.2,10.2s-10.2-4.5-10.2-10.2S44.4,79.7,50,79.7S60.2,84.2,60.2,89.8zM55.5,89.8c0-3-2.4-5.5-5.5-5.5s-5.5,2.4-5.5,5.5s2.4,5.5,5.5,5.5S55.5,92.9,55.5,89.8zM95.3,70.3c0,5.6-4.5,10.2-10.2,10.2S75,75.9,75,70.3s4.5-10.2,10.2-10.2S95.3,64.7,95.3,70.3zM90.6,70.3c0-3-2.4-5.5-5.5-5.5s-5.5,2.4-5.5,5.5s2.4,5.5,5.5,5.5S90.6,73.4,90.6,70.3zM75,29.7c0-5.6,4.5-10.2,10.2-10.2s10.2,4.5,10.2,10.2s-4.5,10.2-10.2,10.2S75,35.3,75,29.7zM79.7,29.7c0,3,2.4,5.5,5.5,5.5s5.5-2.4,5.5-5.5s-2.4-5.5-5.5-5.5S79.7,26.6,79.7,29.7z M25,29.7c0,5.6-4.5,10.2-10.2,10.2S4.7,35.3,4.7,29.7s4.5-10.2,10.2-10.2S25,24.1,25,29.7zM20.3,29.7c0-3-2.4-5.5-5.5-5.5s-5.5,2.4-5.5,5.5s2.4,5.5,5.5,5.5S20.3,32.7,20.3,29.7zM25,70.3c0,5.6-4.5,10.2-10.2,10.2S4.7,75.9,4.7,70.3s4.5-10.2,10.2-10.2S25,64.7,25,70.3z M20.3,70.3c0-3-2.4-5.5-5.5-5.5s-5.5,2.4-5.5,5.5s2.4,5.5,5.5,5.5S20.3,73.4,20.3,70.3z\"\/>\n\t\t<path d=\"M64.6,52.7c0,1-1.9,3.9-4.8,5.3c-1.7,0.9-7-3.4-5.9-4.8s3.4,0.5,4.7-0.5C63.2,49.5,64.6,51.6,64.6,52.7zM71.9,50c0,12-9.8,21.9-21.9,21.9S28.1,62,28.1,50S38,28.1,50,28.1S71.9,38,71.9,50z M67.2,50c0-1.6-0.2-3.1-0.8-4.5l-1.2-0.3h-1.8c-1.1,0-2.1-0.5-2.7-1.3C59.8,42.7,59,41,58.4,41c-0.8,0-2.1,5.5-4.8,5.5c-2.1,0-3.9-4.6-3.3-6.2c0.9-2.3,2.8-1.8,4.8-2.7c0.9-0.4,1.5-1.3,1.5-2.3v-1.2c-2-0.9-4.2-1.3-6.6-1.3c-8.6,0-15.7,6.3-17.1,14.6l1.2-0.1c0.7,0.1,1.3,0.4,1.4,0.9c0.3,2-1.8,2.7-1.2,4.3c0.5,1.5,2.5,2,3.5,1c1-0.9,2.2-3,2.4-4.9c0.3-3.3,4.4-4.8,6.1-1.8c0.5,0.9,0.2,2.5-0.8,3.6s-2.7,2-2.6,3.4c0.2,1.2,4.8,1.4,3.4,6.7c-0.2,0.8-0.6,1.5-1,2.1c-0.3,0.5-0.7,0.9-1.2,1.3c-0.7,0.5-1.4,0.9-2,1.2H42c2.4,1.2,5.2,2,8,2C59.5,67.2,67.2,59.5,67.2,50z\"\/>\n\t<\/svg>\n\n\n\t<h3>\n\t\tYou are using an old or unsupported browser\t<\/h2>\n\n\t<p>\n\t\tFor <b><a href=\"https:\/\/mashable.com\/article\/internet-explorer-vulnerability-just-stop-using-it\/\" target=\"_blank\">security reasons<\/a><\/b> and to get the most out of your theme please upgrade to the latest version of <a href=\"https:\/\/www.microsoft.com\/en-us\/windows\/microsoft-edge\" target=\"_blank\">your browser<\/a> or use one of these browsers instead <a href=\"https:\/\/www.google.com\/chrome\/\" target=\"_blank\">Chrome<\/a>, <a href=\"https:\/\/support.apple.com\/downloads\/safari\" target=\"_blank\">Safari<\/a> or <a href=\"https:\/\/www.mozilla.org\/en-US\/firefox\/new\/\" target=\"_blank\">Firefox <\/a>.\t<\/p>\n<\/div>\n\n"};-->
+<!--/* ]]> */-->
+<!--</script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/main.js" id="ct-scripts-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/wp-embed.js" id="wp-embed-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/jquery_003.js" id="jquery-smooth-scroll-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/js.js" id="js-cookie-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/jquery_002.js" id="jquery-sticky-kit-js"></script>-->
+<!--<script type="text/javascript" id="ez-toc-js-js-extra">-->
+<!--/* <![CDATA[ */-->
+<!--var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"1","width":"auto","scroll_offset":"30"};-->
+<!--/* ]]> */-->
+<!--</script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/front.js" id="ez-toc-js-js"></script>-->
+<!--<script type="text/javascript" src="MrVirkMedia_files/e-202206.js" async="async" defer="defer"></script>-->
+<!--<script type="text/javascript">-->
+<!--_stq = window._stq || [];-->
+<!--_stq.push([ 'view', {v:'ext',j:'1:8.9.2',blog:'152044296',post:'3361',tz:'1',srv:'mrvirk.com'} ]);-->
+<!--_stq.push([ 'clickTrackerInit', '152044296', '3361' ]);-->
+<!--</script>-->
+
+<!--</body></html>-->
+<!--&lt;!&ndash; Dynamic page generated in 0.196 seconds. &ndash;&gt;-->
+<!--&lt;!&ndash; Cached page generated by WP-Super-Cache on 2022-02-08 18:49:30 &ndash;&gt;-->
+<!--&lt;!&ndash; Compression = gzip &ndash;&gt;-->

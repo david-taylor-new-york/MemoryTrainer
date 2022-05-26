@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Subject</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- above are consistent across pages -->
+    <script src="js/controllers/subjectController.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div id="return-link" class="return-link-css">
+    <p><a href="javascript:void(0)" onclick="window.location.href='index.html'">Change Subject</a></p>
+</div>
+
+<script>
+    window.onload = event => {getSubjectNameBySubjectId(getSubjectIdFromQueryString())}
+</script>
+
+<h3 id="subjectPageHeader"></h3>
+
+<input id="trainingPageLink" type="button" class="button-main-css" value="Train" onclick="window.location.href='trainingPage.html?subjectId=' + getSubjectIdFromQueryString()">
+<input id="createViewEditPageLink" type="button" class="button-main-css" value="Create/View/Edit" onclick="window.location.href='createCardsPage.html?subjectId=' + getSubjectIdFromQueryString()">
+<input id="resultsPageLink" type="button" class="button-main-css" value="Results" onclick="window.location.href='trainingResultsPage.html?subjectId=' + getSubjectIdFromQueryString()">
+
+</body>
+
+</html>

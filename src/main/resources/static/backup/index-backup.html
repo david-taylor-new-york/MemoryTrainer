@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Memory Trainer</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="Memory Trainer" content="Train your Memory">
+    <meta name="keywords" content="Memory Train Flashcards">
+    <meta name="author" content="David Taylor">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    Question-Answer Pair = QAP (qwap)-->
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+<div id="mt" class="descending-header-css">
+    <script src="../js/views/homepage/homePageView.js"></script>
+    <script>
+        getDescendingFractalTextHeader();
+    </script>
+</div>
+
+<script>
+    function fetchSubjects() {
+        return fetch('/getAllSubjects')
+            .then( (response) => response.json())
+            .then( (data) => {
+                if (JSON.stringify([]) !== JSON.stringify(data)) {
+                    data.forEach( (item) => {
+                        document.getElementById('chooseSubject').innerHTML +=
+                            `<option value=${item.id}>${item.subjectName}</option>`;
+                    });
+                } else {
+                    document.getElementById('selectASubject').innerText = 'No subjects exist, please create one.';
+                }
+            })
+            .catch(error => console.log("david = an error occured" + error));
+    }
+
+    window.onload = event => {fetchSubjects()};
+
+</script>
+
+<div class="choose-or-add-subject-css">
+    <form>
+        <label for="chooseSubject">Choose a </label>
+        <select id="chooseSubject" name="subject" onchange="window.location.href='subjectPage.html?subjectId=' + this.value">
+            <option value="subject">subject:</option>
+        </select>
+    </form>
+
+    <form action="/addSubject" method="POST">
+        <div style="margin-top: 50px">
+            <label for="subjectName">or create a </label>
+            <input name="subjectName" id="subjectName" placeholder="new subject" class="input-item" required>
+            <button>Add</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+
+</html>

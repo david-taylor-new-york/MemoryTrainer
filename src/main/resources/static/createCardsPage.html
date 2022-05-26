@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<?php include('./meta.php'); ?>
+
+<head>
+    <title>Create/View/Edit Cards</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- above are consistent across pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/controllers/subjectController.js"></script>
+    <script src="js/controllers/cardController.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script> const subjectId = getSubjectIdFromQueryString()</script>
+</head>
+
+<body>
+
+<div class="return-link-css">
+    <p><a href="javascript:void(0)" onclick="window.location.href='subjectPage.html?subjectId=' + subjectId">Main Menu</a></p>
+</div>
+
+<script>
+    window.onload = event => {getSubjectNameBySubjectId(subjectId)}
+</script>
+
+<h3 id="subjectPageHeader"></h3>
+
+<h4 class="sub-page-header-css">Create/View/Edit Cards</h4>
+
+<!-- stuff below the header -->
+
+
+
+<div class="new-card-form-css">
+    <form method="post" id="new-card-form">
+
+        <label for="userId"></label><input type="text" id="userId" name="userId" value="1" hidden>
+        <label for="subjectId"></label><input type="text" id="subjectId" name="subjectId" hidden>
+        <label for="precedesCardId"></label><input type="text" id="precedesCardId" name="precedesCardId" value="1" hidden>
+
+        <div>
+            <label for="question" style="font-weight: bold">New: </label><input style="width: 45%" name="question" id="question" placeholder="question + <tab>" class="input-item" required>
+            <label for="answer"></label><input style="width: 45%" name="answer" id="answer" placeholder="answer + <enter>" class="input-item" required>
+            <button type="button" id="new-card-btn" style="float: right;">Submit</button>
+        </div>
+
+        <script>
+            document.getElementById("subjectId").value = subjectId;
+        </script>
+
+    </form>
+</div>
+
+<script>
+    $("#new-card-btn").click(function(){
+            $.post("/addCard",
+                $("#new-card-form").serialize(),
+                function(data) {
+                    $('#new-card-form')[0].reset();
+                    location.reload();
+                }
+            );
+        }
+    );
+
+    // this handles <enter> key
+    $(document).ready(function() {
+            $('input').keyup(function (event) {
+                    if (event.which === 13) {
+                        $.post("/addCard", $("#new-card-form").serialize(), function (data) {
+                                $('#new-card-form')[0].reset();
+                                location.reload();
+                            }
+                        )
+                    }
+                }
+            );
+        }
+    )
+
+    window.onload = event => {getAllCardsBySubjectId(subjectId)};
+    document.getElementById("question").focus();
+</script>
+
+<table id="tbl" class="card-list-css">
+    <thead>
+    <tr>
+        <th class="custom-table-card-header-css" style="width:4ch"><div class="dev-th-style">Id</div></th>
+        <th class="custom-table-card-header-css"><div class="dev-th-style">Question</div></th>
+        <th class="custom-table-card-header-css"><div class="dev-th-style">Answer</div></th>
+    </tr>
+    </thead>
+    <tbody id="tableBodyId">
+
+    </tbody>
+</table>
+
+</body>
+
+</html>

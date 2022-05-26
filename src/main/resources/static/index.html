@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<?php include('./meta.php'); ?>
+
+<head>
+    <title>Choose Subject</title>
+    <link rel="icon" href="data:,"> <!-- make error go away re. icon -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="Memory Trainer" content="Train your Memory">
+    <meta name="keywords" content="Memory Train Flashcards">
+    <meta name="author" content="David Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/controllers/subjectController.js"></script>
+    <!--    Question-Answer Pair (kwåp)-->
+</head>
+
+<body>
+
+<div id="mt" class="descending-header-css" style="">
+    <script src="js/views/homepage/homePageView.js"></script>
+    <script> getDescendingFractalTextHeader() </script>
+</div>
+
+<script> window.onload = event => {fetchAllSubjectDropDownItems()} </script>
+
+<div class="choose-or-add-subject-css">
+    <form name="subjectNameDropdown">
+        <label for="chooseSubject">Choose a </label>
+        <select id="chooseSubject" name="subject" onchange="window.location.href='subjectPage.html?subjectId=' + this.value">
+            <!--            <option value="subject">subject:</option>-->
+            <option value="subject" disabled selected hidden>subject:</option>
+        </select>
+    </form>
+
+    <form method="post" datatype="json" id="new-subject-form">
+        <div>
+            <label for="subjectName">or create a </label>
+            <input onload=this.value='' style="margin-top: 10px" name="subjectName" id="subjectName" placeholder="new subject" class="input-item" required>
+            <button type="button" id="add-subject-btn">Add</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // this handles <add> button press
+    $("#add-subject-btn").click(function() {
+            $.post("/addSubject",
+                $("#new-subject-form").serialize(),
+                function(data) {
+                    $("#new-subject-form")[0].reset();
+                    location.reload();
+                }
+            );
+        }
+    );
+
+    // this handles <enter> key press
+    $(document).ready(function() {
+            $('input').keyup(function (event) {
+                    if (event.which === 13) {
+                        $.post("/addSubject",
+                            $("#new-subject-form").serialize(),
+                            function (data) {
+                                $('#new-subject-form')[0].reset();
+                                location.reload();
+                            }
+                        )
+                    }
+                }
+            );
+        }
+    )
+
+    document.getElementById("subjectName").focus();
+
+</script>
+
+</body>
+
+</html>
